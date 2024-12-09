@@ -1,0 +1,42 @@
+  html {
+    display: flex;
+    height: 100vh;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    margin: auto;
+  }
+  label, input {
+    display: block;
+    width: 60%;
+    padding: 1em;
+    margin: auto;
+  }
+  h1 {
+    text-align: center;
+  }
+  body form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    text-align: center;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 85%;
+  }
+  footer p {
+    text-align: center;
+  }
+input {
+  max-width: 300px;
+}
+main a {
+  display: block;
+  text-align: center;
+}
