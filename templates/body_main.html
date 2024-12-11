@@ -31,11 +31,13 @@
     </th>
   </thead>
   <tbody>
+    {% for issue in issues %}
     <tr>
-      <td span=row>001</td>
-      <td>Login</td>
-      <td>High</td>
-      <td>Open</td>
+      <td span=row>{{issue.id}}</td>
+      <td>{{issue.Type}}</td>
+      <td>{{issue.priority}}</td>
+      <td>{{issue.status}}</td>
     </tr>
+    {% endfor %}
   </tbody>
 </table>
