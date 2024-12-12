@@ -32,33 +32,13 @@ class Issue(models.Model):
     module = models.ForeignKey(Module, on_delete=models.CASCADE)
     Type = models.CharField(max_length=20)
     description = models.TextField()
-    can_esc = models.BooleanField(default=False)
+    #can_esc = models.BooleanField(default=False)
+    #associated user defaults to module leader
     assoc_user = models.ForeignKey(User, on_delete=models.CASCADE)
-    parent_issue = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return "Issue Type {} on module {} of project {}".format(self.Type, self.module, self.module.assoc_project)
 
-    def escalate(self):
-        _issue = {}
-        _issue['Type'] = self.Type
-        _issue['module'] = self.module
-        _issue['description'] = self.description
-        _issue['assoc_user'] = self.assoc_user
-        _issue['parent_issue'] = self.id
-
-        issue = Issue.objects.create(_issue)
-        issue.save()
-        escalate_to = Issue.module.assoc_project.project_manager
-        _issue_assignment = {}
-        _issue_assignmemnt['staff'] = escalate_to
-        _issue_assignmemnt['issue'] = issue 
-        _issue_assignmemnt['expected_resolution'] = timezone.now()
-        _issue_assignment['priority'] = 'H'
-
-        issue_assignment = IssueAssgnmt.objects.create(_issue_assignment)
-        print(issue_assignment)
-        return issue_assignment 
 
 class IssueAssgnmt(models.Model):
     priority_options = [
@@ -74,16 +54,45 @@ class IssueAssgnmt(models.Model):
                       ("C", "closed"),
                      ]
 
+    #default staff assigned == module leader
+    #module leader can assign issue to some other users/escalate to project manager
+
     staff = models.ForeignKey(User, on_delete=models.CASCADE)
     issue = models.ForeignKey(Issue, on_delete=models.CASCADE)
     issued_at = models.DateTimeField(auto_now=True)
-    expected_resolution_date = models.DateTimeField()
+    expected_resolution_date = models.DateTimeField(blank=True, null=True)
     status = models.TextField(max_length=1, choices=status_choices, default="O")
     priority = models.TextField(max_length=1, choices=priority_options, default="L")
     resolution_date = models.DateTimeField(blank=True, null=True)
+    escalated = models.BooleanField(default=False)
+    #parent_issue = models.ForeignKey(Issue, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return "Issue {} assigned to {}".format(self.id, self.staff.username)
+
+    def escalate(self):
+        if self.escalated is False:
+            self.escalated = True
+            self.save()
+            _reassignment = {}
+            #escalate to manager
+            _reassignment['staff'] = self.issue.module.assoc_project.project_manager
+            _reassignment['issue'] = self.issue
+            _reassignment['issued_at'] = timezone.now()
+            #expected resolution data can be empty
+            #_reassignment['expected_resolution_date'] = None
+            #status default to open
+            _reassignment['priority'] = 'H' #change priority to high
+            #resolution_date = Null
+            #escalated default to false
+            #_reassignment['escalated'] = True
+
+            issue_reassignment = IssueAssgnmt.objects.create(**_reassignment)
+            print(issue_reassignment)
+            return issue_reassignment 
+
+    def solve(self):
+        self.status = 'C'
 
 class Comment(models.Model):
     issue = models.ForeignKey(Issue, on_delete=models.CASCADE)

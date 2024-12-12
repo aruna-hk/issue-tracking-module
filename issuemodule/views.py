@@ -10,6 +10,6 @@ class HomeView(LoginRequiredMixin, View):
     def get(self, request):
         ctx = {}
         issues = IssueAssgnmt.objects.select_related('issue').all()
+        print(issues)
         ctx['issues'] = issues
-        print(issues[0].__dict__)
         return render(request, "dashboard.html", ctx)
