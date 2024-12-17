@@ -21,3 +21,18 @@ header figure img {
 figure {
     display: flex;
 }
+#projectassgn {
+    display: flex;
+    justify-content: center;
+    border: solid 1px;
+    align-items: center;
+}
+#projectassgn a {
+    display: block;
+}
+#projectassgn > div {
+    border: solid 1px green;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 0.5em;
+}

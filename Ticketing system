@@ -1,0 +1,22 @@
+ISSUE TICKETING AND TRACKING MODUEL
+user
+  admin(s)
+     role
+        -create users
+        -create projects
+        -asign projects to users(project managers)
+        -manages permissions
+  project manager(s)
+     role
+       -create project modules
+       -asign modules to users
+       -resolve escaleted issues
+  module leader(s)/developer(s)
+     role
+       -resolve module isues
+       -escalate issues to project managers
+       -assign issues to other users(i.e developers), who can solve or escalate issues to them
+  
+  system users/normal users/consumers
+     role
+       -raise issues when they arise

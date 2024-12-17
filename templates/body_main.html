@@ -33,8 +33,8 @@
   <tbody>
     {% for issue in issues %}
     <tr>
-      <td span=row>{{issue.id}}</td>
-      <td>{{issue.Type}}</td>
+      <td>{{issue.id}}</td>
+      <td>{{issue.issue.Type}}</td>
       <td>{{issue.priority}}</td>
       <td>{{issue.status}}</td>
     </tr>

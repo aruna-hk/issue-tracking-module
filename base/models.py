@@ -35,6 +35,7 @@ class Issue(models.Model):
     #can_esc = models.BooleanField(default=False)
     #associated user defaults to module leader
     assoc_user = models.ForeignKey(User, on_delete=models.CASCADE)
+    raised_by = models.EmailField(null=True)
 
     def __str__(self):
         return "Issue Type {} on module {} of project {}".format(self.Type, self.module, self.module.assoc_project)
@@ -42,16 +43,16 @@ class Issue(models.Model):
 
 class IssueAssgnmt(models.Model):
     priority_options = [
-                         ("H", "High"),
-                         ("M", "Medium"),
-                         ("L", "Low"),
+                         ("High", "High"),
+                         ("Medium", "Medium"),
+                         ("Low", "Low"),
                        ]
 
     status_choices = [
-                      ("O", "open"),
-                      ("P", "pending"),
-                      ("I", "In progress"),
-                      ("C", "closed"),
+                      ("Open", "open"),
+                      ("Pending", "pending"),
+                      ("In progress", "In progress"),
+                      ("Closed", "closed"),
                      ]
 
     #default staff assigned == module leader
@@ -61,8 +62,8 @@ class IssueAssgnmt(models.Model):
     issue = models.ForeignKey(Issue, on_delete=models.CASCADE)
     issued_at = models.DateTimeField(auto_now=True)
     expected_resolution_date = models.DateTimeField(blank=True, null=True)
-    status = models.TextField(max_length=1, choices=status_choices, default="O")
-    priority = models.TextField(max_length=1, choices=priority_options, default="L")
+    status = models.TextField(max_length=12, choices=status_choices, default="Open")
+    priority = models.TextField(max_length=6, choices=priority_options, default="Low")
     resolution_date = models.DateTimeField(blank=True, null=True)
     escalated = models.BooleanField(default=False)
     #parent_issue = models.ForeignKey(Issue, on_delete=models.CASCADE, null=True, blank=True)
@@ -92,7 +93,7 @@ class IssueAssgnmt(models.Model):
             return issue_reassignment 
 
     def solve(self):
-        self.status = 'C'
+        self.status = 'Closed'
 
 class Comment(models.Model):
     issue = models.ForeignKey(Issue, on_delete=models.CASCADE)
