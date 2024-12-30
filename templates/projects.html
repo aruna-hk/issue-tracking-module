@@ -6,6 +6,7 @@
 <title>ISSUE TICKETING AND TRACKING</title>
 <link rel=stylesheet href={% static 'css/dashboard_header.css' %}>
 <link rel=stylesheet href={% static 'css/dashboard.css' %}>
+<link rel=stylesheet href={% static 'css/project.css' %}>
 {% endblock head %}
 {% block body %}
 <header>
@@ -18,7 +19,7 @@
     <thead>
       <th>ProjectId</th>
       <th>Name</th>
-      <th>No.of Modules</th>
+      <th>No.of Modules</a></th>
       <th>Start date</th>
       <th>Expected end date</th>
       <th>Total issues</th>
@@ -27,8 +28,13 @@
       {% for project in projects %}
       <tr>
           <td>{{project.id}}</td>
-          <td>{{project.project_title}}</td>
-          <td>{{project.modules}}</td>
+          <td class="project">
+            <a href="">{{project.project_title}}</a>
+            <div class=prj>
+              Description: {{project.description}}
+            </div>
+          </td>
+          <td><a href="">{{project.modules}}</a>  <a href="">+</a></td>
           <td>{{project.start_date}}</td>
           <td>{{project.end_date}}</td>
           <td>{{project.issues}}</td>

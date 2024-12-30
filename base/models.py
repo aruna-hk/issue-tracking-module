@@ -26,11 +26,12 @@ class Module(models.Model):
 
 
 class Issue(models.Model):
+    type_options = [('bug', 'bug'), ('FR', 'feature requuest'), ('IM', 'improvement')]
     #id self incrementing
     created_at = models.DateTimeField(auto_now=True)
     #related_project = models.ForeignKey(Project, on_delete=models.SET_NULL, nullable=True)
     module = models.ForeignKey(Module, on_delete=models.CASCADE)
-    Type = models.CharField(max_length=20)
+    Type = models.CharField(choices=type_options, max_length=20)
     description = models.TextField()
     #can_esc = models.BooleanField(default=False)
     #associated user defaults to module leader
@@ -40,6 +41,9 @@ class Issue(models.Model):
     def __str__(self):
         return "Issue Type {} on module {} of project {}".format(self.Type, self.module, self.module.assoc_project)
 
+
+    def alert_dev(self):
+        print("sending email/notificatio to developer in charge of the module")
 
 class IssueAssgnmt(models.Model):
     priority_options = [
