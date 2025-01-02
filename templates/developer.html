@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<meta charset=utf-8>
+<meta name=viewport content=width=device-width>
+<title>ISSUE TICKETING AND TRACKING</title>
+<link rel=stylesheet href={% static 'css/dashboard_header.css' %}>
+<link rel=stylesheet href={% static 'css/dashboard.css' %}>
+<link rel=stylesheet href={% static 'css/bheader.css' %}>
+{% endblock head %}
+{% block body %}
+<header>
+  {% include "header.html" %} 
+</header>
+<main>
+  <header>
+    <nav>
+    {% include 'bodyh_developer.html' %}
+    </nav>
+  </header>
+  <section>
+    <aside>
+      {% include 'body_aside.html' %}
+    </aside>
+    <main>
+      {% include 'body_main.html' %}
+    </main>
+  </section>
+</main>
+{% endblock body %}
