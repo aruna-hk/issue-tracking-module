@@ -1,9 +1,9 @@
 {% load static %}
-<h1>Dashboard</h1>
+<h1><a href={% url 'home' %}>Dashboard</a></h1>
 <figure>
   <img src={% static 'img/pp.png' %} alt="profile picture">
   <figcaption>
-    <div id="username">Kiptoo</div>
+    <div id="username">{{user.username}}</div>
     <a href={% url 'logout' %}>Logout</a>
   </figcaption>
 </figure>

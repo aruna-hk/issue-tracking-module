@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<header>
+  {% include 'header.html' %}
+</header>
+{% block head %}
+<link rel=stylesheet href={% static 'css/issue.css' %}>
+<link rel=stylesheet href={% static 'css/dashboard_header.css' %}>
+{% endblock head %}
+<form action="" method=post>
+  {% csrf_token %}
+  {{form}}
+  <input id=reporter type=submit value=report>
+</form>
+{% block scripts %}
+  <script src={% static 'js/report.js' %}></script>
+{% endblock scripts %}
+{% endblock body %}
