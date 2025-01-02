@@ -4,14 +4,12 @@
   </caption>
   <thead>
     <th>Issue ID</th>
-    <th>Project</th>
     <th>
       <label for=Type>Type</label>
       <select id=Type name=Type>
         <option value=All>All</option>
-        <option>bug</option>
-        <option>feature request</option>
-        <option>Improvement</option>
+        <option>Login</option>
+        <option>Purchaseorders</option>
       </select>
     </th>
     <th>
@@ -31,18 +29,13 @@
         <option value=Closed>Closed</option>
       </select>
     </th>
-    <th>Assigned to</th>
   </thead>
   <tbody>
-    {% for issue in issues %}
     <tr>
-      <td>{{issue.id}}</td>
-      <td>{{issue.issue.module.assoc_project}}</td>
-      <td>{{issue.issue.Type}}</td>
-      <td>{{issue.priority}}</td>
-      <td>{{issue.status}}</td>
-      <td>{{issue.issue.assoc_user}}</td>
+      <td span=row>001</td>
+      <td>Login</td>
+      <td>High</td>
+      <td>Open</td>
     </tr>
-    {% endfor %}
   </tbody>
 </table>
