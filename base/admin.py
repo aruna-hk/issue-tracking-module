@@ -27,7 +27,7 @@ admin.site.register(Comment)
 
    
 class IssueAdmin(admin.ModelAdmin):
-    list_display = ('id', 'Type', 'module', 'created_at', 'assoc_user')
+    #list_display = ('id', 'Type', 'module', 'created_at', 'assoc_user')
 
     def get_queryset(self, request):
         queryset = super().get_queryset(request)
@@ -65,7 +65,7 @@ class ProjectAdmin(admin.ModelAdmin):
 admin.site.register(Project, ProjectAdmin)
 
 class ModuleAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'assoc_project', 'assigned_to', 'description', 'expected_completion_date')
+    #list_display = ('id', 'title', 'assoc_project', 'assigned_to', 'description', 'expected_completion_date')
     search_fields = ('title',)
 
     def get_queryset(self, request):

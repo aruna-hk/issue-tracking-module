@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import View
 from django.http import HttpResponse
@@ -7,6 +7,10 @@ from .models import Project, Module, Issue, IssueAssgnmt
 from django.views.decorators.csrf import csrf_exempt
 from .forms import IssueForm
 from django.http import HttpResponse
+import redis
+from .models import Module
+
+redis_client = redis.Redis()
 
 class Projects(LoginRequiredMixin, View):
     #get existing projects + module + issues
@@ -33,7 +37,9 @@ class Log(LoginRequiredMixin, View):
         form = IssueForm(request.POST)
         if form.is_valid():
             project = form.cleaned_data.pop('project')
-            assoc_user = form.cleaned_data['module'].assigned_to
-            form.cleaned_data['assoc_user'] = assoc_user
+            module = form.cleaned_data['module']
+            form.cleaned_data['assoc_user'] = module.assigned_to
             issue = Issue.objects.create(**(form.cleaned_data))
-        return HttpResponse('Created')
+            #issue.alert_dev()
+            redis_client.publish(module.channel, issue.Type)
+        return redirect('log')

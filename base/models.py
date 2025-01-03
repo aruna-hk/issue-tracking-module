@@ -1,7 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+#from .views import redis_client
+#from issuemodule.views import redis_client
+import redis
 
+redis_client = redis.Redis()
 
 class Project(models.Model):
     """pass"""
@@ -21,6 +25,12 @@ class Module(models.Model):
     description = models.TextField(blank=False)
     expected_completion_date = models.DateTimeField(blank=True, null=True)
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        #create a channel for issues
+        #developers will subscribe on page load for notification
+        self.channel = "module_" + str(self.id) + "_channel"
+
     def __str__(self):
         return self.assoc_project.project_title + " " +self.title
 
@@ -35,15 +45,20 @@ class Issue(models.Model):
     description = models.TextField()
     #can_esc = models.BooleanField(default=False)
     #associated user defaults to module leader
-    assoc_user = models.ForeignKey(User, on_delete=models.CASCADE)
-    raised_by = models.EmailField(null=True)
+    assoc_user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    raised_by = models.EmailField(null=True, blank=True)
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        #print(self.module)
+        #redis_client.publish(self.module.channel, self.Type)
 
     def __str__(self):
         return "Issue Type {} on module {} of project {}".format(self.Type, self.module, self.module.assoc_project)
 
 
     def alert_dev(self):
-        print("sending email/notificatio to developer in charge of the module")
+        redis_client.publish(self.module.channel, self.Type)
 
 class IssueAssgnmt(models.Model):
     priority_options = [

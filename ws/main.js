@@ -17,7 +17,8 @@ wss.on('connection', (ws, req)=>{
           })
         }
       })
+    } else {
+      clients[queryParams.channel].push(ws)
     }
-    clients[queryParams.channel].push(ws)
    })
 })

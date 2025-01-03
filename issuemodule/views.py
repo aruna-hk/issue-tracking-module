@@ -8,6 +8,9 @@ from base.models import Issue, IssueAssgnmt
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django.contrib.auth.models import User, Group
+#import redis
+from base.models import Module
+#redis_client = redis.Redis()
 
 class HomeView(LoginRequiredMixin, View):
 
@@ -20,6 +23,8 @@ class HomeView(LoginRequiredMixin, View):
         if request.user.groups.filter(name='managers').exists():
             return render(request, "dashboard.html", ctx)
         if request.user.groups.filter(name='developers').exists():
+            subscribe_to = Module.objects.get(assigned_to=request.user).channel
+            ctx['channel'] = subscribe_to
             return render(request, "developer.html", ctx)
         #print(request.user)
         #print(User.objects.get(username="kephisprocurementmoduleleader@gmail.com") == request.user)
