@@ -1,0 +1,35 @@
+#esci, #openi {
+  display:none;
+  position:absolute;
+  border-radius: 5px;
+  height: 450px;
+  top: 70px;
+  min-width: 400px;
+  border: solid black 2px;
+  z-index:1;
+  background: orange;
+  overflow: scroll;
+}
+
+#esci {
+  background: red;
+}
+
+header a:hover {
+  cursor: pointer;
+}
+.IS {
+  float: right;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+#esc:hover #esci {
+  z-index: 1;
+  cursor:auto;
+  display: block;
+}
+#open:hover #openi {
+  z-index: 1;
+  display: block;
+  cursor: auto;
+}

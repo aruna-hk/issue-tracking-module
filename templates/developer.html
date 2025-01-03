@@ -8,6 +8,8 @@
 <link rel=stylesheet href={% static 'css/dashboard.css' %}>
 <link rel=stylesheet href={% static 'css/bheader.css' %}>
 <link rel=stylesheet href={% static 'css/notif.css' %}>
+<link rel=stylesheet href={% static 'css/notifications.css' %}>
+<link rel=stylesheet href={% static 'css/openi.css' %}>
 {% endblock head %}
 {% block body %}
 <header>
@@ -32,7 +34,12 @@
     <img src={% static 'img/icons/bell.png' %} alt="notif bell">
   </div>
 </main>
+<aside id="notifs">
+  <button>Close</button>
+</aside>
 {% endblock body %}
 {% block scripts %}
   <script src={% static 'js/notif.js' %}></script>
+  <script src={% static 'js/notifications.js' %}></script>
+  <script src={% static 'js/open_esc.js' %}></script>
 {% endblock scripts %}

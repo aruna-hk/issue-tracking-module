@@ -1,0 +1,18 @@
+#notifs {
+  display: none;
+  position: fixed;
+  height: 300px;
+  min-width: 350px;
+  border: solid;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: oldlace;
+  margin-right: 1em;
+}
+
+#notifs button {
+  float: right;
+  margin-right: 1em;
+  margin-top: 1em;;
+}
