@@ -22,9 +22,24 @@ class HomeView(LoginRequiredMixin, View):
             return redirect('admin/')
         if request.user.groups.filter(name='managers').exists():
             return render(request, "dashboard.html", ctx)
-        if request.user.groups.filter(name='developers').exists():
+        if request.user.groups.filter(name='developers').exists(): 
             subscribe_to = Module.objects.get(assigned_to=request.user).channel
             ctx['channel'] = subscribe_to
+            ctx['total'] = issues.count()
+            open_issues = issues.filter(status='Open')
+            ctx['open'] = open_issues.count()
+            ctx['open_issues'] = open_issues
+            escalated_issues = issues.filter(escalated=True)
+            ctx['escalated'] = escalated_issues.count()
+            ctx['escalated_issues'] = escalated_issues
+            highp = issues.filter(priority='High')
+            print(highp)
+            mediup = issues.filter(priority='Mediun')
+            lowp = issues.filter(priority='Low')
+            ctx['high'] = highp.count()
+            ctx['medium'] = mediup.count()
+            ctx['low'] = lowp.count()
+            ctx['priority'] = highp
             return render(request, "developer.html", ctx)
         #print(request.user)
         #print(User.objects.get(username="kephisprocurementmoduleleader@gmail.com") == request.user)

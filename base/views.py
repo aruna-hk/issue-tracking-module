@@ -9,6 +9,7 @@ from .forms import IssueForm
 from django.http import HttpResponse
 import redis
 from .models import Module
+import json
 
 redis_client = redis.Redis()
 
@@ -41,5 +42,20 @@ class Log(LoginRequiredMixin, View):
             form.cleaned_data['assoc_user'] = module.assigned_to
             issue = Issue.objects.create(**(form.cleaned_data))
             #issue.alert_dev()
-            redis_client.publish(module.channel, issue.Type)
+            #redis_client.publish(module.channel, json.dumps(issue.__dict__))
+            #issue_assignement dict
+            issueassignment = {}
+            issueassignment['staff'] = form.cleaned_data['assoc_user']#default user
+            issueassignment['issue'] = issue
+            issueAssignment = IssueAssgnmt.objects.create(**issueassignment)
+            issue_dict = {}
+            issue_dict['id'] = issueAssignment.id
+            issue_dict['Type'] = issueAssignment.issue.Type
+            issue_dict['created_at'] = issueAssignment.issue.created_at.strftime("%Y%M%D %H:%m")
+            issue_dict['project'] = issueAssignment.issue.module.assoc_project.project_title
+            issue_dict['status'] = issueAssignment.status
+            issue_dict['priority'] = issueAssignment.priority
+            issue_dict['assigned_to'] = issueAssignment.staff.username
+            redis_client.publish(module.channel, json.dumps(issue_dict))
+
         return redirect('log')

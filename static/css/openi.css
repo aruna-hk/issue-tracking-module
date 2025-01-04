@@ -1,27 +1,31 @@
 #esci, #openi {
-  display:none;
+  display: block;
+  color: black;
   position:absolute;
   border-radius: 5px;
-  height: 450px;
+  max-height: 450px;
+  min-height: 50px;
   top: 70px;
-  min-width: 400px;
-  border: solid black 2px;
-  z-index:1;
-  background: orange;
+  min-width: 300px;
+  border: solid black 1px;
+  z-index:-1;
+  background:  #ffffff;
   overflow: scroll;
 }
-
-#esci {
-  background: red;
+.issuec > div:hover {
+  cursor: pointer;
 }
-
+.issuec div {
+  text-align: center;
+}
 header a:hover {
   cursor: pointer;
 }
-.IS {
-  float: right;
-  margin-top: 1em;
-  margin-right: 1em;
+.btns {
+  display: flex;
+  justify-content: end;
+  margin-top: 5px;
+  margin-right: 5px;
 }
 #esc:hover #esci {
   z-index: 1;
@@ -32,4 +36,52 @@ header a:hover {
   z-index: 1;
   display: block;
   cursor: auto;
+}
+.btns {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+}
+.btns button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btns button:hover {
+  background-color: #d32f2f;
+}
+.issuec {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+}
+.issuec_item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.issuec_item button {
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 60%;
+  margin: auto;
+}
+.issuec_item button:hover {
+  background-color: #45a049; 
 }

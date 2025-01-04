@@ -10,6 +10,7 @@
 <link rel=stylesheet href={% static 'css/notif.css' %}>
 <link rel=stylesheet href={% static 'css/notifications.css' %}>
 <link rel=stylesheet href={% static 'css/openi.css' %}>
+<link rel=stylesheet href={% static 'css/solve.css' %}>
 {% endblock head %}
 {% block body %}
 <header>
@@ -37,6 +38,26 @@
 <aside id="notifs">
   <button>Close</button>
 </aside>
+<div class="sisue">
+  <div id="si">
+    <label for=pr>Project</label>
+    <div id=pr>Project name</div>
+    <label for=md>Module</label>
+    <div id=md>Module name</div>
+    <label for=desc>Description</label>
+    <div id=desc>Description</div>
+    <div id=rform>
+      <label for=cm>Comment</label>
+      <textarea id=cm></textarea>
+      <label for=ir>incident report</label>
+      <textarea id=ir></textarea>
+      <div id=rbs>
+        <button>Close</button>
+        <button>Resolve</button>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock body %}
 {% block scripts %}
   <script src={% static 'js/notif.js' %}></script>
