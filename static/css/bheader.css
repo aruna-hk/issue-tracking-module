@@ -8,9 +8,6 @@
   position: absolute;
   display: none;
 }
-#open:hover #openlist {
-  display: block;
-}
 
 #esc {
   display: block;
@@ -23,9 +20,7 @@
   position: absolute;
   display: none;
 }
-#esc:hover #esclist {
-  display: block;
-}
+
 .issues {
   display: grid;
   border: solid 1px black;

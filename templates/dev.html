@@ -1,0 +1,78 @@
+{% load static %}
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev dashboard</title>
+    <script type="module" crossorigin="" src="/assets/index-C2W9Bny3.js"></script>
+    <link rel="stylesheet" crossorigin="" href={% static 'css/dev.css'%}>
+    <link rel="stylesheet" crossorigin="" href={% static 'css/headstrip.css'%}>
+    <link rel="stylesheet" href={% static 'css/issues.css' %}>
+    <link rel=stylesheet href={% static 'css/issue2.css' %}>
+  </head>
+  <body>
+<div id="issueinstance">    <div class="issue-box">
+        <button id=closeissue>Close</button>     
+        <div class="issue-header">
+            Issue #12345: Website Loading Error
+        </div>
+
+        
+        <div class="issue-type">
+            <strong>Type:</strong> Bug
+        </div>
+
+        
+        <div class="issue-description">
+            <p>The website fails to load when clicking on the "Login" button. This issue occurs across all browsers and devices.</p>
+        </div>
+
+        
+        <div class="comment-section">
+            <label for="comment">Comment:</label>
+            <textarea id="comment" class="comment-input" placeholder="Comment to sent to issuer here..."></textarea>
+            <button class="comment-button">Comment</button>
+        </div>
+
+        
+        <div class="solve-section">
+            <label for="solution">Incident Report:</label>
+            <textarea id="solution" class="solve-input" placeholder="Resolution description here..."></textarea>
+            <button class="solve-button">Solve</button>
+        </div>
+    </div>
+  </div>
+    <div id=bodyheader>
+    {% include 'header.html' %}
+    </div>
+    <div id="root"><div class="devlanding-container">
+<div class="sidebar">
+<button id=TI>Total Issues</button>
+<button id=OI>Open Issues</button>
+<button id=EI>Escalated Issues</button>
+<button id=IS>Summary</button>
+</div>
+<div class="content-area">
+    <div id=allissues>
+      <h1>All Issues</h1>
+      <table class=data-table>
+        <thead><tr><th>Issue ID</th><th>Type</th><th>Priority</th><th>Status</th><th>Assigned To</th></tr></thead>
+        <tbody>
+        {% for issue in issues %}
+          <tr>
+            <td>{{issue.issue.id}}</td>
+            <td>{{issue.issue.Type}}</td>
+            <td>{{issue.priority}}</td>
+            <td>{{issue.status}}</td>
+            <td>{{issue.issue.assoc_user}}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+    </div>
+    </div> 
+<script src={% static 'js/issues.js' %}></script>
+<script src={% static 'js/openissues.js' %}></script>
+<script src={% static 'js/escalatedissues.js' %}></script>
+<script src={% static 'js/tableeventlistener.js' %}></script>
+<script src={% static 'js/summary.js' %}></script>
+</body></html>

@@ -8,7 +8,6 @@ import redis
 redis_client = redis.Redis()
 
 class Project(models.Model):
-    """pass"""
     project_manager = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
     project_title = models.CharField(max_length=30, blank=False)
     description = models.TextField()

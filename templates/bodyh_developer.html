@@ -1,12 +1,27 @@
 <div class="total-issues">
-  <a href="">
+  <a href=#issuetable>
     <p>Total Issues</p>
-    <h2>450</h2>
+    <h2>{{total}}</h2>
   </a>
 </div>
-<a href="" id=open>
+<a id=open>
 <div class="circle-box open-issues">
-  <h2>120</h2>
+  <div id=openi>
+    <div class=btns>
+      <button class=IS>Close</button>
+    </div>
+    <div class=issuec>
+    {% for issue in open_issues %}
+    <div class=issuec_item>
+      <div>Type:{{issue.issue.Type}}</div>
+      <div>Issued At:{{issue.issued_at}}</div>
+      <div>Priority:{{issue.priority}}</div>
+      <button>Open</button>
+    </div> 
+    {% endfor %}
+    </div>
+  </div>
+  <h2>{{open}}</h2>
    <p>Open</p>
  </div>
 <div id=openlist>
@@ -17,9 +32,23 @@
      </div>
 </div>
 </a>
-<a href="" id=esc>
+<a id=esc>
 <div class="circle-box escalated-issues">
-  <h2>30</h2>
+  <div id=esci>
+    <div class=btns>
+      <button class=IS>Close</button>
+    </div>
+    <div class=issuec>
+    {% for issue in escalated_issues %}
+    <div>
+      <div>{{issue.issue.Type}}<div>
+      <div>{{issue.issued_at}}</div>
+      <div>{{issue.priority}}</div>
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+  <h2>{{escalated}}</h2>
   <p>Escalated</p>
 </div>
 <div id=esclist>
@@ -33,8 +62,42 @@
 <div class="priority-box">
  <h3>Issues Summary Based on Priority</h3>
  <ul>
-   <li><a href=''>High: <span>40</span></a></li>
-   <li><a href="">Medium: <span>120</span></a></li>
-   <li><a href="">Low: <span>80</span></a></li>
+   <li><a>High: <span>{{high}}</span></a>
+
+     <div class=pp>
+       <button>Close</button>
+       {% for issue in highp %}
+         <div class=iss-item>
+           <div>Type:{{issue.Type}}</div>
+           <div>Issued at:{{issue.issued_at}}</div>
+           <button>Open</button>
+         </div>
+        {% endfor %}
+     </div>
+   </li>
+   <li><a>Medium: <span>{{medium}}</span></a>
+     <div class=pp>
+       <button>Close</button>
+       {% for issue in mediup %}
+         <div class=iss-item>
+           <div>Type:{{issue.Type}}</div>
+           <div>Issued at:{{issue.issued_at}}</div>
+           <button>Open</button>
+         </div>
+        {% endfor %}
+     </div>
+   </li>
+   <li><a>Low: <span>{{low}}</span></a>
+     <div class=pp>
+       <button>Close</button>
+       {% for issue in lowp %}
+         <div class=iss-item>
+           <div>Type:{{issue.Type}}</div>
+           <div>Issued at:{{issue.issued_at}}</div>
+           <button>Open</button>
+         </div>
+        {% endfor %}
+     </div>
+   </li>
   </ul>
 </div>

@@ -17,10 +17,12 @@
     </tr>
   </thead>
   <tbody>
+    {% for issue in priority %}
     <tr>
-      <td scope=row>#001</td>
-      <td>Login</td>
-      <td>24/02/2001, 11.20pm</td>
+      <td scope=row>{{issue.id}}</td>
+      <td>{{issue.issue.Type}}</td>
+      <td>{{issue.issued_at}}</td>
     </tr>
+    {% endfor %}
   </tbody>
 </table>

@@ -1,0 +1,59 @@
+.sisue {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: ;
+  position: fixed;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: -1
+}
+#si button {
+  float: right;
+  margin: 5px;
+}
+#si {
+  min-width: 350px;
+  max-width: 450px;
+  height: 400px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc; 
+  padding: 20px;
+  box-sizing: border-box; 
+  height calculation ;
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+  overflow-y: auto; 
+}
+.sisue label {
+  font-size: 14px;
+  font-weight: bold;
+}
+.sisue textarea {
+  width: 100%;
+  height: 80px;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#rbs {
+  display: flex;
+  justify-content: space-around;
+}
+.sisue button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049; 
+}

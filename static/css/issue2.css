@@ -1,0 +1,20 @@
+#issueinstance {
+  display: flex;
+  width: 90%;
+  height: 100%;
+  margin-left: 2em;
+  z-index: -1;
+  position: absolute;
+  align-content: center;
+  justify-content: center;
+}
+#allissues{
+  height: 500px;
+  overflow: scroll;
+}
+#closeissue {
+  float: right;
+  width: 50px;
+  height: 30px;
+  background: fuchsia;
+}

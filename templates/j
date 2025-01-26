@@ -1,0 +1,67 @@
+{% load static %}
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev dashboard</title>
+    <script type="module" crossorigin="" src="/assets/index-C2W9Bny3.js"></script>
+    <link rel="stylesheet" crossorigin="" href={% static 'css/dev.css'%}>
+    <link rel="stylesheet" crossorigin="" href={% static 'css/headstrip.css'%}>
+    <link rel="stylesheet" href={% static 'css/issues.css' %}>
+    <link rel=stylesheet href={% static 'css/issue2.css' %}>
+    <link rel=stylesheet href={% static 'css/managerdash.css' %}>
+  </head>
+  <body>
+<div id="issueinstance">    <div class="issue-box">
+        <button id=closeissue>Close</button>     
+        <div class="issue-header">
+            Issue #12345: Website Loading Error
+        </div>
+
+        
+        <div class="issue-type">
+            <strong>Type:</strong> Bug
+        </div>
+
+        
+        <div class="issue-description">
+            <p>The website fails to load when clicking on the "Login" button. This issue occurs across all browsers and devices.</p>
+        </div>
+
+        
+        <div class="comment-section">
+            <label for="comment">Comment:</label>
+            <textarea id="comment" class="comment-input" placeholder="Comment to sent to issuer here..."></textarea>
+            <button class="comment-button">Comment</button>
+        </div>
+
+        
+        <div class="solve-section">
+            <label for="solution">Incident Report:</label>
+            <textarea id="solution" class="solve-input" placeholder="Resolution description here..."></textarea>
+            <button class="solve-button">Solve</button>
+        </div>
+    </div>
+  </div>
+    <div id=bodyheader>
+    {% include 'header.html' %}
+    </div>
+    <div id="root"><div class="devlanding-container">
+<div class="sidebar">
+<button id=PRJ>Pojects</button>
+<button id=OI>Open Issues</button>
+<button id=EI>Escalated Issues</button>
+<button id=IS>Summary</button>
+</div>
+<div class="content-area">
+  <div class="modal-overlay"><div class="modal-container"><div class="modal-content"><div class="modal-header"><button class="close-button" aria-label="Close modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button><h2 class="modal-title">Projects Overview</h2></div><input type="text" placeholder="Search by project ID or name..." class="search-input" value=""><div class="table-container"><table class="projects-table"><thead><tr class="table-header"><th><button class="sort-button">Project ID<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-down sort-icon"><path d="m21 16-4 4-4-4"></path><path d="M17 20V4"></path><path d="m3 8 4-4 4 4"></path><path d="M7 4v16"></path></svg></button></th><th><button class="sort-button">Name<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-down sort-icon"><path d="m21 16-4 4-4-4"></path><path d="M17 20V4"></path><path d="m3 8 4-4 4 4"></path><path d="M7 4v16"></path></svg></button></th><th><button class="sort-button">Pending Issues<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-down sort-icon"><path d="m21 16-4 4-4-4"></path><path d="M17 20V4"></path><path d="m3 8 4-4 4 4"></path><path d="M7 4v16"></path></svg></button></th><th><button class="sort-button">High Priority<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-down sort-icon"><path d="m21 16-4 4-4-4"></path><path d="M17 20V4"></path><path d="m3 8 4-4 4 4"></path><path d="M7 4v16"></path></svg></button></th><th><button class="sort-button">Last Updated<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-down sort-icon"><path d="m21 16-4 4-4-4"></path><path d="M17 20V4"></path><path d="m3 8 4-4 4 4"></path><path d="M7 4v16"></path></svg></button></th><th><button class="sort-button">Status<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-down sort-icon"><path d="m21 16-4 4-4-4"></path><path d="M17 20V4"></path><path d="m3 8 4-4 4 4"></path><path d="M7 4v16"></path></svg></button></th></tr></thead>
+<tbody><tr class="table-row"><td class="table-cell">PRJ-001</td><td class="table-cell">KEPHIS</td><td class="table-cell"><span>8</span></td><td class="table-cell"><span>3</span></td><td class="table-cell">2024-03-15</td><td class="table-cell"><span class="status-badge">active</span></td></tr><tr class="table-row"><td class="table-cell">PRJ-002</td><td class="table-cell">Mediheal Eldoret</td><td class="table-cell"><span>5</span></td><td class="table-cell"><span>2</span></td><td class="table-cell">2024-03-14</td><td class="table-cell"><span class="status-badge">active</span></td></tr><tr class="table-row"><td class="table-cell">PRJ-003</td><td class="table-cell">Honeycoin Wallet</td><td class="table-cell"><span>12<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert alert-icon"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg></span></td><td class="table-cell"><span>4</span></td><td class="table-cell">2024-03-13</td><td class="table-cell"><span class="status-badge">active</span></td></tr><tr class="table-row"><td class="table-cell">PRJ-004</td><td class="table-cell">Lake Basin Development Authority</td><td class="table-cell"><span>3</span></td><td class="table-cell"><span>1</span></td><td class="table-cell">2024-03-12</td><td class="table-cell"><span class="status-badge">on-hold</span></td></tr><tr class="table-row"><td class="table-cell">PRJ-005</td><td class="table-cell">Heva Fund</td><td class="table-cell"><span>7</span></td><td class="table-cell"><span>2</span></td><td class="table-cell">2024-03-11</td><td class="table-cell"><span class="status-badge">active</span></td></tr></tbody>
+</tbody>
+</table></div></div></div></div>
+    </div>
+<script src={% static 'js/openissues.js' %}></script>
+<script src={% static 'js/escalatedissues.js' %}></script>
+<script src={% static 'js/tableeventlistener.js' %}></script>
+<script src={% static 'js/summary.js' %}></script>
+<script src={% static 'js/projects.js' %}></script>
+</body></html>
