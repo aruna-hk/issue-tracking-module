@@ -55,7 +55,7 @@ class HomeView(View):
                         __issue['esc'] = issue.escalated
                         _issues.append(__issue)
                     return JsonResponse(_issues, safe=False)
-                return render(request, "dev.html", ctx)
+                return render(request, "0-index.html", ctx)
         #print(request.user)
         #print(User.objects.get(username="kephisprocurementmoduleleader@gmail.com") == request.user)
         #if request.user == User.objects.get(username="kephisprocurementmoduleleader@gmail.com"):
