@@ -1,4 +1,8 @@
 jQuery(document).ready(function(){
+  jQuery('Capa_1').bind('click', function(event){
+    console.log(event)
+    jQuery('#ff').css('display', 'none')
+  })
   jQuery('#lpop li').bind('click', function(event){
     event.stopPropagation()
     event.currentTarget.parentElement.parentElement.parentElement.style.display = 'none'
@@ -11,7 +15,11 @@ jQuery(document).ready(function(){
   jQuery('.headerdiv, #usr').bind('click', function(event){
     console.log(event)
     event.stopPropagation()
-    event.currentTarget.firstElementChild.style.display = 'block'
+    if (event.currentTarget.textContent == 'Create'){
+      jQuery('#ff').css('display', 'flex')
+    } else {
+      event.currentTarget.firstElementChild.style.display = 'block'
+    }
   })
   jQuery('.headerdiv').bind('click', function(event){
     event.stopPropagation()
@@ -23,7 +31,9 @@ jQuery(document).ready(function(){
       jQuery('#main2').css('display', 'none')
       jQuery('#main1').css('display', 'block')
       jQuery('#ppp').css('display', 'none')
-    }
+    } else {
+       console.log('other')
+     }
    })
   jQuery('.IS').bind('click', function(event){
     event.stopPropagation()
@@ -32,15 +42,23 @@ jQuery(document).ready(function(){
       jQuery('#ccc').css('display', 'block')
       jQuery('#ppp').css('display', 'none')
       jQuery('#lll').css('display', 'none')
+      jQuery('#tlm').css('display', 'none')
     } else if (this.textContent == "Summary") {
       jQuery('#sumc').css('display', 'block')
       jQuery('#ccc').css('display', 'none')
       jQuery('#ppp').css('display', 'none')
       jQuery('#lll').css('display', 'none')
+      jQuery('#tlm').css('display', 'none')
     } else if (this.textContent == 'List') {
       jQuery('#ccc').css('display', 'none')
       jQuery('#sumc').css('display', 'none')
       jQuery('#lll').css('display', 'block')
+      jQuery('#tlm').css('display', 'none')
+    } else if (this.textContent == 'Timeline') {
+      jQuery('#ccc').css('display', 'none')
+      jQuery('#sumc').css('display', 'none')
+      jQuery('#lll').css('display', 'none')
+      jQuery('#tlm').css('display', 'block')
     }
   })
   jQuery('.dd').bind('click', function(event){

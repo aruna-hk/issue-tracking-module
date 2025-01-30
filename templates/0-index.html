@@ -8,6 +8,81 @@
     <script src="/static/js/0-index.js"></script>
   </head>
   <body>
+  <div id="ff">
+  <div id="fff">
+  <header>
+    <div>Create Issue</div>
+    <div>
+      <svg fill="#000000" height="15" width="15" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.775 460.775" xml:space="preserve">
+<path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55  c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55  c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505  c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55  l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719  c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"></path>
+</svg>
+    </div>
+  </header>
+  <div id="rf">
+  <div id="im">
+<label for="fruit">Project</label>
+<select id="fruit" name="fruit">
+  <option value="apple">Issue Tracking</option>
+  <option value="banana">Data analysis and visualization</option>
+  
+  
+</select>
+  </div><div id="im">
+<label for="fruit">Issue Type</label>
+<select id="fruit" name="fruit">
+  <option value="apple">Task</option>
+  <option value="banana">Bug</option><option value="banana">Feature request</option>
+  
+  
+</select>
+  </div>
+  </div>
+  <div id="im">
+<label for="fruit">Status</label>
+<select id="fruit" name="fruit">
+  <option value="apple">TO DO</option>
+  <option value="banana">Data analysis and visualization</option>
+  
+  
+</select>
+  </div><div id="im">
+<label for="fruit">Assigne To</label>
+<select id="fruit" name="fruit">
+  <option value="apple">USR 1</option>
+  <option value="banana">USR 2</option>
+  
+  
+</select>
+  </div>
+  <div class="sm">
+    <label for="smm">Summary</label>
+    <input type="text">
+  </div>
+  <div class="sm">
+    <label for="descrr">Description</label>
+    <textarea type="textarea"></textarea>
+  </div>
+  <div class="sm">
+    <label for="pi">Parent Issue</label>
+    <select id="pi" name="parent">
+      <option value="apple">Apple</option>
+      <option value="banana">Banana</option>
+      <option value="cherry">Cherry</option>
+      <option value="date">Date</option>
+    </select>
+  </div>
+  <div class="sm">
+    <label for="fi">Attachments</label>
+    <input id="fi" type="file">
+  </div>
+<div id="ffoot">
+  <div id="fc">
+    <div>Cancel</div>
+    <button>Create</button>
+  </div>
+</div></div>
+
+  </div>
     <header id="bodyheader">    
 <nav>
   <div>
@@ -167,9 +242,9 @@
     </article>
   </section><section id="issuesumary">
     <header id="issue">
-  <button class="issueh" style="background: green;">worked on</button><button class="issueh" style="background: none;">viewed</button><button class="issueh">assigned to me</button><button class="issueh" style="background: none;">Starred</button>
+  <button class="issueh" style="background: none;">worked on</button><button class="issueh" style="background: none;">viewed</button><button class="issueh" style="background: green;">assigned to me</button><button class="issueh" style="background: none;">Starred</button>
     </header>
-  <div id="wo" style="display: block;">
+  <div id="wo" style="display: none;">
     <div class="issues" id="xza">
   <h3>Today</h3>
   <div class="container">
@@ -291,7 +366,7 @@
     </div>
     </div></div></div>
 </div>
-  </div><div id="stm" style="display: none;">
+  </div><div id="stm" style="display: block;">
     <div class="issues" id="xza">
   <h3>Today</h3>
   <div class="container">
@@ -421,6 +496,100 @@
   
 <section>
   <h3>projects/<span id="prname">issues tracking</span></h3>
+
+<div id="tlm">
+    <h4>Timeline</h4>
+  <div style="width: 1000px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
+    <div style="display: flex;">
+      <!-- Left Column - Issues List -->
+      <div style="width: 400px; background: #fff; border-right: 1px solid #DFE1E6;">
+        <!-- Issue Row 1 -->
+        <div style="display: flex; align-items: center; padding: 8px; border-bottom: 1px solid #DFE1E6; height: 40px;">
+          <input type="checkbox" style="margin-right: 8px;">
+          <div style="display: flex; align-items: center; flex-grow: 1;">
+            
+            
+            <div>
+              <span style="color: #42526E; font-size: 14px; font-weight: 500;">IS-001</span>
+              <span style="color: #42526E; font-size: 14px; margin-left: 8px;">DATABASE DESIGN</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Issue Row 2 -->
+        <div style="display: flex; align-items: center; padding: 8px; border-bottom: 1px solid #DFE1E6; height: 40px;">
+          <input type="checkbox" style="margin-right: 8px;">
+          <div style="display: flex; align-items: center; flex-grow: 1;">
+            
+            
+            <div>
+              <span style="color: #42526E; font-size: 14px; font-weight: 500;">IS-002</span>
+              <span style="color: #42526E; font-size: 14px; margin-left: 8px;">requirements gathering</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Create Epic Button -->
+        
+      </div>
+
+      <!-- Right Column - Timeline Calendar -->
+      <div style="flex-grow: 1; background: #fff;">
+        <!-- Calendar Header -->
+        <div style="display: flex; border-bottom: 1px solid #DFE1E6;">
+          <div style="width: 60px; padding: 8px; text-align: center; color: #42526E; font-size: 12px; border-right: 1px solid #DFE1E6;">JAN</div>
+          <div style="display: flex; flex-grow: 1;">
+            <div style="width: 40px; padding: 8px; text-align: center; color: #42526E; font-size: 12px;">23</div>
+            <div style="width: 40px; padding: 8px; text-align: center; color: #42526E; font-size: 12px;">24</div>
+            <div style="width: 40px; padding: 8px; text-align: center; color: #42526E; font-size: 12px; background: #F4F5F7;">25</div>
+            <div style="width: 40px; padding: 8px; text-align: center; color: #42526E; font-size: 12px; background: #F4F5F7;">26</div>
+            <div style="width: 40px; padding: 8px; text-align: center; color: #42526E; font-size: 12px;">27</div>
+            <div style="width: 40px; padding: 8px; text-align: center; color: #42526E; font-size: 12px;">28</div>
+            <div style="width: 40px; padding: 8px; text-align: center; color: #42526E; font-size: 12px;">29</div>
+            <div style="width: 40px; padding: 8px; text-align: center; color: #0052CC; font-size: 12px;">30</div>
+            <div style="width: 40px; padding: 8px; text-align: center; color: #42526E; font-size: 12px;">31</div>
+            <div style="width: 40px; padding: 8px; text-align: center; color: #42526E; font-size: 12px; background: #F4F5F7;">1</div>
+            <div style="width: 40px; padding: 8px; text-align: center; color: #42526E; font-size: 12px; background: #F4F5F7;">2</div>
+          </div>
+        </div>
+
+        <!-- Timeline Rows -->
+        <div style="display: flex; height: 40px; align-items: center; border-bottom: 1px solid #DFE1E6;">
+          <div style="width: 60px; border-right: 1px solid #DFE1E6;"></div>
+          <div style="position: relative; flex-grow: 1; height: 100%;">
+            <!-- Timeline bar for CPG-2 -->
+            <div style="position: absolute; left: 0; top: 12px; width: 320px; height: 16px; background: #8777D9; border-radius: 3px;"></div>
+            <!-- Today marker -->
+            <div style="position: absolute; left: 280px; top: 0; width: 2px; height: 100%; background: #0052CC;"></div>
+          </div>
+        </div>
+
+        <div style="display: flex; height: 40px; align-items: center; border-bottom: 1px solid #DFE1E6;">
+          <div style="width: 60px; border-right: 1px solid #DFE1E6;"></div>
+          <div style="position: relative; flex-grow: 1; height: 100%;">
+            <!-- Timeline bar for CPG-1 -->
+            <div style="position: absolute; left: 0; top: 12px; width: 440px; height: 16px; background: #8777D9; border-radius: 3px;"></div>
+            <!-- Today marker -->
+            <div style="position: absolute; left: 280px; top: 0; width: 2px; height: 100%; background: #0052CC;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .issue-row:hover {
+        background-color: #F4F5F7;
+      }
+      input[type="checkbox"] {
+        cursor: pointer;
+      }
+    </style>
+  </div>
+  </div>
+
+
+
+
 <div id="lll">
   <header>
   <h4>List</h4>
@@ -522,66 +691,226 @@
 
 </table></div>
 </div>
-  <div id="ccc">
+<div id="ccc">
   <h4>Board</h4>
-  <section class="ll">
+  <section class="board">
+   <div class="column" id="todo">
+    <h3>To Do</h3>
+    <div class="card">
+      <p>Web infrastructure design</p>
+  <div class="bs">
+    <div class="key">IS-001</div>
+    <div class="ku"></div>
+    </div></div>
     
-    <section class="rt">
-  <header>To Do</header>
-  <div class="it">
-    <div id="po">1st</div>
-  </div><div class="it">
-    <div id="po">1st</div>
   </div>
-    </section><section class="rt">
-  <header>In progress</header>
-  <div class="it">
-    <div id="po">1st</div>
-  </div>
-    </section><section class="rt">
-  <header>Done</header>
-  <div class="it">
-    <div id="po">1st</div>
-  </div><div class="it">
-    <div id="po">1st</div>
-  </div>
-    </section>
+  
+  <div class="column" id="in-progress">
+    <h3>In Progress</h3>
+    
+  <div class="card">
+      <p>Database design</p>
+  <div class="bs">
+    <div class="key">IS-002</div>
+    <div class="ku"></div>
+    </div></div></div>
+  
+  <div class="column" id="done">
+    <h3>Done</h3>
+    
+  <div class="card">
+      <p>Requirements gatherng</p>
+  <div class="bs">
+    <div class="key">IS-000</div>
+    <div class="ku"></div>
+    </div></div></div>
   </section>
-    </div><div id="sumc">
+</div>
+
+<div id="sumc">
   <h4>Summary</h4>
   <section class="ll">
-  <header id="sumch">
-    <div class="poi">
-      <div class="ssi"></div>
-      <div class="qw">
-        <div>1 Completed</div>
-        <div>In last 7 days</div>
+
+<div class="header-strip">
+        <div class="item">
+            <div class="icon">
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,17L5,12L6.4,10.6L10,14.2L17.6,7.4L19,8.8L10,17Z"></path>
+                </svg>
+            </div>
+            <div class="count">0 completed</div>
+            <div class="label">in the last 7 days</div>
+        </div>
+        <div class="item">
+            <div class="icon">
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M17,13H19V19H17V13M13,13H15V19H13V13M9,13H11V19H9V13M5,13H7V19H5V13M12,2C6.48,2 2,6.48 2,12C2,17.52 5.54,21.93 11,23V21C8.24,19.91 6,17.21 6,14A6,6 0 0,1 12,8A6,6 0 0,1 18,14C18,17.21 15.76,19.91 13,21V23C18.46,21.93 22,17.52 22,12C22,6.48 17.52,2 12,2Z"></path>
+                </svg>
+            </div>
+            <div class="count">2 updated</div>
+            <div class="label">in the last 7 days</div>
+        </div>
+        <div class="item">
+            <div class="icon">
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M9,17A3,3 0 0,1 6,14A3,3 0 0,1 9,11A3,3 0 0,1 12,14A3,3 0 0,1 9,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"></path>
+                </svg>
+            </div>
+            <div class="count">2 created</div>
+            <div class="label">in the last 7 days</div>
+        </div>
+         <div class="item">
+            <div class="icon">
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M19,19V8H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19M12,13A2,2 0 0,1 14,15A2,2 0 0,1 12,17A2,2 0 0,1 10,15A2,2 0 0,1 12,13M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z"></path>
+                </svg>
+            </div>
+            <div class="count">1 due</div>
+            <div class="label">in the next 7 days</div>
+        </div>
+    </div>
+
+  <div class="r1">
+
+   <div style="width: 300px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
+    <h3 style="margin: 0 0 8px 0; color: #344563; font-size: 16px;">Status overview</h3>
+    <p style="margin: 0 0 20px 0; color: #42526E; font-size: 14px;">
+      Get a snapshot of the status of your issues. 
+      <a href="#" style="color: #0052CC; text-decoration: none;">View all issues</a>
+    </p>
+    
+    <div style="position: relative; width: 200px; height: 200px; margin: 0 auto;">
+      <svg viewBox="0 0 100 100">
+        <!-- Done (1) -->
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#4BADE8" stroke-width="10" stroke-dasharray="18.75 81.25" stroke-dashoffset="-0"></circle>
+        
+        <!-- In Progress (2) -->
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#FF7452" stroke-width="10" stroke-dasharray="25 75" stroke-dashoffset="-18.75"></circle>
+        
+        <!-- To Do (5) -->
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#FF8F73" stroke-width="10" stroke-dasharray="56.25 43.75" stroke-dashoffset="-43.75"></circle>
+        
+        <!-- Center text -->
+        <text x="50" y="45" text-anchor="middle" font-size="24" font-weight="bold" fill="#172B4D">8</text>
+        <text x="50" y="65" text-anchor="middle" font-size="12" fill="#42526E">Total issues</text>
+      </svg>
+    </div>
+    
+    <!-- Legend -->
+    <div style="margin-top: 20px; font-size: 14px;">
+      <div style="display: flex; align-items: center; margin-bottom: 8px;">
+        <span style="display: inline-block; width: 12px; height: 12px; background: #FF8F73; border-radius: 3px; margin-right: 8px;"></span>
+        <span style="color: #42526E;">To Do (5)</span>
       </div>
-    </div><div class="poi">
-      <div class="ssi"></div>
-      <div class="qw">
-        <div>1 Completed</div>
-        <div>In last 7 days</div>
+      <div style="display: flex; align-items: center; margin-bottom: 8px;">
+        <span style="display: inline-block; width: 12px; height: 12px; background: #FF7452; border-radius: 3px; margin-right: 8px;"></span>
+        <span style="color: #42526E;">In Progress (2)</span>
       </div>
-    </div><div class="poi">
-      <div class="ssi"></div>
-      <div class="qw">
-        <div>1 Completed</div>
-        <div>In last 7 days</div>
-      </div>
-    </div><div class="poi">
-      <div class="ssi"></div>
-      <div class="qw">
-        <div>1 Completed</div>
-        <div>In last 7 days</div>
+      <div style="display: flex; align-items: center;">
+        <span style="display: inline-block; width: 12px; height: 12px; background: #4BADE8; border-radius: 3px; margin-right: 8px;"></span>
+        <span style="color: #42526E;">Done (1)</span>
       </div>
     </div>
-  </header>
-  <div class="r1">
-    <article class="info"></article>
-    <article class="info"></article>
-    <article class="info"></article>
+  </div>
+
+<div style="width: 300px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
+    <h3 style="margin: 0 0 8px 0; color: #344563; font-size: 16px;">Team workload</h3>
+    <p style="margin: 0 0 20px 0; color: #42526E; font-size: 14px;">
+      Monitor the capacity of your team. 
+      <a href="#" style="color: #0052CC; text-decoration: none;">Reassign issues to get the right balance</a>
+    </p>
+
+    <div style="margin-bottom: 16px;">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+        <div style="color: #42526E; font-size: 12px;">Assignee</div>
+        <div style="color: #42526E; font-size: 12px;">Work distribution</div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div style="display: flex; align-items: center; min-width: 120px;">
+          <!-- User avatar -->
+          <svg width="24" height="24" viewBox="0 0 24 24" style="margin-right: 8px;">
+            <circle cx="12" cy="12" r="11" fill="#DFE1E6" stroke="#6B778C" stroke-width="1"></circle>
+            <path d="M12 13c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zm0 2c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4z" fill="#6B778C"></path>
+          </svg>
+          <span style="color: #42526E; font-size: 14px;">Unassigned</span>
+        </div>
+
+        <!-- Progress bar container -->
+        <div style="flex-grow: 1; height: 24px; background: #DFE1E6; border-radius: 3px; overflow: hidden;">
+          <!-- Progress bar -->
+          <div style="width: 100%; height: 100%; background: #6B778C; display: flex; align-items: center; padding: 0 8px;">
+            <span style="color: white; font-size: 12px;">100%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div style="width: 300px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
+    <h3 style="margin: 0 0 8px 0; color: #344563; font-size: 16px;">Types of work</h3>
+    <p style="margin: 0 0 20px 0; color: #42526E; font-size: 14px;">
+      Get a breakdown of issues by their types. 
+      <a href="#" style="color: #0052CC; text-decoration: none;">View all items</a>
+    </p>
+
+    <div style="margin-bottom: 16px;">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+        <div style="color: #42526E; font-size: 12px;">Type</div>
+        <div style="color: #42526E; font-size: 12px;">Distribution</div>
+      </div>
+
+      <!-- Task Row -->
+      <div style="display: flex; align-items: center; margin-bottom: 12px; gap: 12px;">
+        <div style="display: flex; align-items: center; min-width: 100px;">
+          <svg width="16" height="16" viewBox="0 0 16 16" style="margin-right: 8px;">
+            <rect width="16" height="16" rx="3" fill="#4BADE8"></rect>
+            <path d="M4 8.5L7 11.5L12 4.5" stroke="white" stroke-width="2" fill="none"></path>
+          </svg>
+          <span style="color: #42526E; font-size: 14px;">Task</span>
+        </div>
+        <div style="flex-grow: 1; height: 16px; background: #DFE1E6; border-radius: 3px; overflow: hidden;">
+          <div style="width: 71%; height: 100%; background: #6B778C; display: flex; align-items: center;">
+            <span style="color: white; font-size: 12px; margin-left: 8px;">71%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Epic Row -->
+      <div style="display: flex; align-items: center; margin-bottom: 12px; gap: 12px;">
+        <div style="display: flex; align-items: center; min-width: 100px;">
+          <svg width="16" height="16" viewBox="0 0 16 16" style="margin-right: 8px;">
+            <rect width="16" height="16" rx="3" fill="#8777D9"></rect>
+            <path d="M4 8L8 4L12 8L8 12L4 8Z" fill="white"></path>
+          </svg>
+          <span style="color: #42526E; font-size: 14px;">Epic</span>
+        </div>
+        <div style="flex-grow: 1; height: 16px; background: #DFE1E6; border-radius: 3px; overflow: hidden;">
+          <div style="width: 29%; height: 100%; background: #6B778C; display: flex; align-items: center;">
+            <span style="color: white; font-size: 12px; margin-left: 8px;">29%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtask Row -->
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div style="display: flex; align-items: center; min-width: 100px;">
+          <svg width="16" height="16" viewBox="0 0 16 16" style="margin-right: 8px;">
+            <rect width="16" height="16" rx="3" fill="#4BADE8"></rect>
+            <path d="M4 8H12M8 4V12" stroke="white" stroke-width="2"></path>
+          </svg>
+          <span style="color: #42526E; font-size: 14px;">Subtask</span>
+        </div>
+        <div style="flex-grow: 1; height: 16px; background: #DFE1E6; border-radius: 3px; overflow: hidden;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   </div> 
+
+
   </section>
     </div>
   </section>
@@ -646,6 +975,7 @@
 
 </table></div>
 </div>
+
 
 
 

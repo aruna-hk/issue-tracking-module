@@ -1,3 +1,83 @@
+#tlm {
+  display: none;
+}
+.r1>div{
+  margin-top: 1.5em; 
+}
+#ff{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  justify-content: center; 
+}
+#fff {
+  margin-top: 5em;
+  width: 60%;
+  height: 500px;
+  background: #dfebe0;
+  border-radius: 10px;
+  overflow: scroll;
+}
+#fff header{
+  margin: 1em;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+}
+#rf {
+  margin: 0 10px; 
+  border-bottom: solid 1px; 
+}
+#im label, #rf label {
+  display: block;
+}
+.sm select, #im select, #rf select {
+  margin: 10px;
+  height: 40px;
+}
+.sm label{
+  margin: 10px;
+  display: block;
+}
+.sm input {
+  height: 40px;
+  margin: 15px;
+}
+#fc {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+#fc>div:hover, #fc>button:hover{
+  cursor: pointer;
+}
+#fc button {
+  background:#11ed2e;
+  height: 40px;
+  width: 70px;
+  margin: 1em;
+  border-radius: 0.5em;
+}
+.sm textarea {
+  margin: 15px;
+  height: 70px;
+  min-width: 70%;
+}
+#ff header svg:hover {
+  cursor: pointer;
+  transform: rotate(60deg);
+}
+#lpop > div {
+  width: 100%;
+  margin: 5px;
+  color: black;
+  text-decoration: none;
+}
+
 #pta {
   display: flex;
   justify-content: center;
@@ -468,3 +548,201 @@ button {
 .morec > div {
   margin: 5px;
 }
+.prj {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-width: 300px;
+}
+/* Styling for the small colored strip on the left */
+.str1 {
+  width: 20px; /* Small width for the strip */
+  background-color: #3498db; /* Blue color, adjust as needed */
+  height: 100%; /* Full height of the container */
+}
+
+/* Styling for the main content area (str2) */
+.str2 {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Styling for the description section */
+.pdesc {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Styling for the small rectangular box inside pdesc */
+.pdesci {
+  width: 20px;
+  height: 20px;
+  background-color: #3498db; /* Same color as str1 */
+  margin-right: 10px; /* Space between the colored box and the text */
+  border-radius: 3px; /* Optional: to make it slightly rounded */
+}
+
+/* Styling for the title and project description */
+.ppdesc {
+  display: flex;
+  flex-direction: column;
+}
+
+.nname h5 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.ttype {
+  color: #888;
+  font-size: 14px;
+}
+
+/* More section */
+.more h5 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.morec {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.oi, .di {
+  font-size: 14px;
+  color: #555;
+}
+
+.oc {
+  font-weight: bold;
+  color: #3498db;
+}
+
+/* Project Boards label */
+.bl {
+  font-size: 16px;
+  font-weight: bold;
+  color: #3498db;
+  margin-top: 20px;
+}
+.board {
+  display: flex;
+  width: 80%;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-flow: wrap;
+}
+
+/* Column styles */
+.column {
+  min-width: 200px;
+  max-width: 250px;
+  margin: 5px;
+  background-color: #eaeaea;
+  padding: 15px;
+  border-radius: 8px;
+  min-height: 300px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Column heading */
+.column h3 {
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Card styles */
+.card {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Different background colors for each column */
+#todo {
+  background-color: #f9c74f; /* Yellow */
+}
+
+#in-progress {
+  background-color: #90be6d; /* Green */
+}
+
+#done {
+  background-color: #577590; /* Blue */
+}
+
+/* Adding hover effects for columns */
+.column:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.bs {
+  display: flex;
+  justify-content: space-between;
+}
+.ku {
+  width: 30px;
+  height: 30px;
+  background: pink;
+  border-radius: 50%;
+}
+     .header-strip {
+            background-color: #f0f0f0; /* Light gray background */
+            display: flex;
+       width: 100%;
+            justify-content: space-between; /* Distribute items evenly */
+            align-items: center; /* Vertically center items */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .header-strip .item {
+            display: flex;
+            flex-direction: column; /* Stack icon and text */
+            align-items: center; /* Center content horizontally */
+            text-align: center; /* Center text within the container */
+        }
+.header-strip .item:hover{
+  cursor: pointer;
+  background-color: lightgreen; 
+}
+        .icon {
+            width: 24px; /* Adjust icon size as needed */
+            height: 24px;
+             /* Space between icon and text */
+        }
+        .count {
+            font-size: 1em;
+            font-weight: bold;
+            color: #333; /* Dark gray text */
+        }
+
+        .label {
+            font-size: 0.6em;
+            color: #666; /* Gray text */
+        }
+
+
