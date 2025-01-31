@@ -96,8 +96,13 @@
 }
 .p09 {
   display: none;
+  width: 100px;
+  background: green;
+  height: 100px;
   position: absolute;
   top: 69px;
+  height: 300px;
+  width: 200px;
   border-radius: 0.5em; 
 }
 
@@ -299,6 +304,9 @@ button {
   margin-right: 0.5em
 }
 .prj {
+  min-height: 200px;
+  max-height: 300px;
+  width: 200px;
   margin: 5px;
   background: saddlebrown;
 }
@@ -865,229 +873,3 @@ button {
 #project > div {
   margin: 10px;
 }
-
-.p09{
-    width: 350px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    border: 1px solid #DFE1E6;
-    border-radius: 3px;
-    background: white;
-}
-
-.tabs {
-    display: flex;
-    border-bottom: 2px solid #DFE1E6;
-    padding: 0;
-    margin: 0;
-}
-
-.tab {
-    padding: 8px 16px;
-    color: #42526E;
-    cursor: pointer;
-    font-size: 14px;
-    list-style: none;
-    position: relative;
-}
-
-.tab.active {
-    color: #0052CC;
-}
-
-.tab.active::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: #0052CC;
-}
-
-.content {
-    padding: 16px;
-}
-
-.section {
-    display: none;
-}
-
-.section.active {
-    display: block;
-}
-
-.empty-state {
-    color: #42526E;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-}
-
-.work-link {
-    display: block;
-    color: #0052CC;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-top: 1px solid #DFE1E6;
-    font-size: 14px;
-}
-
-.work-link:hover {
-    background: #F4F5F7;
-}
-
-.nav-row {
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    cursor: pointer;
-    border-bottom: 1px solid #DFE1E6;
-    text-decoration: none;
-    color: inherit;
-}
-
-.nav-row:hover {
-    background: #F4F5F7;
-}
-
-.nav-row.active {
-    background: #DEEBFF;
-}
-
-.issue-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-    fill: #42526E;
-}
-
-.issue-details {
-    flex-grow: 1;
-}
-
-.issue-title {
-    font-size: 14px;
-    color: #172B4D;
-    margin-bottom: 2px;
-}
-
-.issue-meta {
-    font-size: 12px;
-    color: #6B778C;
-    display: flex;
-    gap: 8px;
-}
-
-.status-badge {
-    padding: 2px 4px;
-    border-radius: 3px;
-    font-size: 12px;
-}
-
-.status-todo {
-    background: #DEEBFF;
-    color: #0052CC;
-}
-
-.status-progress {
-    background: #E3FCEF;
-    color: #006644;
-}
-
-.status-review {
-    background: #FFE380;
-    color: #172B4D;
-}
-
-#p099 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    border: 1px solid #DFE1E6;
-    border-radius: 3px;
-    background: white;
-}
-.section-header {
-    padding: 12px 16px;
-    font-size: 11px;
-    font-weight: 600;
-    color: #42526E;
-    text-transform: uppercase;
-}
-.project-item {
-    display: flex;
-    align-items: center;
-    padding: 8px 16px;
-    text-decoration: none;
-    border-top: 1px solid #DFE1E6;
-    position: relative;
-}
-
-.project-item:hover {
-    background: #F4F5F7;
-}
-
-.project-icon {
-    width: 24px;
-    height: 24px;
-    background: #0052CC;
-    border-radius: 3px;
-    margin-right: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.project-icon svg {
-    width: 16px;
-    height: 16px;
-    fill: white;
-}
-
-.project-info {
-    flex-grow: 1;
-}
-
-.project-title {
-    font-size: 14px;
-    color: #172B4D;
-    margin-bottom: 2px;
-}
-
-.project-subtitle {
-    font-size: 12px;
-    color: #6B778C;
-}
-
-.more-menu {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 4px;
-    cursor: pointer;
-}
-
-.try-now {
-    color: #0052CC;
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    margin-left: 8px;
-}
-
-.bottom-links {
-    padding: 8px 16px;
-}
-
-.bottom-link {
-  width: 100%;
-  display: flex;
-    color: #0052CC;
-    text-decoration: none;
-    padding: 4px 0;
-    font-size: 14px;
-}
-
-.bottom-link:hover {
-    text-decoration: underline;
-}
-

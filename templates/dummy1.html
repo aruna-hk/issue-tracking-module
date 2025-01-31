@@ -1,5 +1,3 @@
-{% load static %}
-<!doctype html>
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -83,32 +81,106 @@
     <header id="bodyheader">    
 <nav>
   <div>
-  <div class="headerdiv">Dashboards
-  <div class="p09">sds</div>
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="20px" width="20px">
-
-<rect x="0" fill="none" width="30" height="30"></rect>
-
-<g>
-
-<path d="M7 10l5 5 5-5"></path>
-
-</g>
+  <div class="headerdiv">
+  <h1>Dashboard</h1>
   
-</svg></div>
-  <div class="headerdiv"><div class="p09">
-  <header>
-    <div>assigned to me</div>
-    <div>Recent</div>
-    <div>Boards</div>
-  </header>
-  <div id="rtr">
-  <div id="recent"></div>
-  <div id="asstome"></div>
-  <div id="boards"></div>
-</div>
-</div>My work
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="20px" width="20px">
+  </div>
+  <div class="headerdiv">My work
+  
+  <div class="p09">
+  <ul class="tabs">
+        <li class="tab active">Assigned to me</li>
+        <li class="tab">Recent</li>
+        <li class="tab">Boards</li>
+    </ul><div class="content">
+        <!-- Assigned section -->
+        <div class="section active">
+            <a href="#" class="nav-row">
+                <svg class="issue-icon" viewBox="0 0 16 16">
+                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"></path>
+                </svg>
+                <div class="issue-details">
+                    <div class="issue-title">Implement user authentication</div>
+                    <div class="issue-meta">
+                        <span>PRJ-123</span>
+                        <span class="status-badge status-todo">To Do</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="nav-row">
+                <svg class="issue-icon" viewBox="0 0 16 16">
+                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"></path>
+                </svg>
+                <div class="issue-details">
+                    <div class="issue-title">Fix responsive layout bugs</div>
+                    <div class="issue-meta">
+                        <span>PRJ-124</span>
+                        <span class="status-badge status-progress">In Progress</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="nav-row">
+                <svg class="issue-icon" viewBox="0 0 16 16">
+                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"></path>
+                </svg>
+                <div class="issue-details">
+                    <div class="issue-title">Update API documentation</div>
+                    <div class="issue-meta">
+                        <span>PRJ-125</span>
+                        <span class="status-badge status-review">In Review</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Recent section -->
+        <div class="section">
+            <a href="#" class="nav-row">
+                <svg class="issue-icon" viewBox="0 0 16 16">
+                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"></path>
+                </svg>
+                <div class="issue-details">
+                    <div class="issue-title">Optimize database queries</div>
+                    <div class="issue-meta">
+                        <span>Updated 2h ago</span>
+                        <span class="status-badge status-progress">In Progress</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="nav-row">
+                <svg class="issue-icon" viewBox="0 0 16 16">
+                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"></path>
+                </svg>
+                <div class="issue-details">
+                    <div class="issue-title">Add unit tests</div>
+                    <div class="issue-meta">
+                        <span>Updated 1d ago</span>
+                        <span class="status-badge status-todo">To Do</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Boards section -->
+        <div class="section">
+            <a href="#" class="nav-row">
+                <div class="issue-details">
+                    <div class="issue-title">Development Board</div>
+                    <div class="issue-meta">8 active issues</div>
+                </div>
+            </a>
+            <a href="#" class="nav-row">
+                <div class="issue-details">
+                    <div class="issue-title">QA Testing Board</div>
+                    <div class="issue-meta">3 active issues</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="20px" width="20px" style="display: block;">
 
 <rect x="0" fill="none" width="30" height="30"></rect>
 
@@ -120,23 +192,7 @@
 
 </svg>
 </div>
-  <div class="headerdiv"><div id="one1" class="p09">
-  <div id="lpop">
-  <div>Recent</div>
-  <ul>
-    <li>
-      <div class="picon"></div>
-      <div class="pname">Issue Tracking</div>
-    </li>
-    <li>
-      <div class="picon"></div>
-      <div class="pname">Data visualization</div>
-    </li>
-  </ul>
-  </div>
-  <div class="dd">View all Projects</div>
-  <div class="dd">Create Project</div>
-</div>Projects<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="20px" width="20px">
+  <div class="headerdiv">Projects<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="20px" width="20px">
 
 <rect x="0" fill="none" width="30" height="30"></rect>
 
@@ -181,83 +237,71 @@
   <h4>All projects</h4>
     </div>
     <article id="project">
-      <div class="prj">
-  <div class="str1">
-  
-</div>
-  <div class="str2">
-<div class="pdesc">
-    <div class="pdesci"></div>
-    <div class="ppdesc">
-      <div class="nname"><h5>Issue Tracking</h5></div>
-      <div class="ttype">Software Development project</div>
+      <div class="">
+<div class="issue-widget">
+    <div class="header">
+        <div class="icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
+            </svg>
+        </div>
+        <div>
+            <div class="title">Issuetracking</div>
+            <div class="subtitle">Software project</div>
+        </div>
     </div>
-  </div>
-  <div class="more">
-    <h5>Overview and Quick Links</h5>
-    <div class="morec">
-      <div class="oi">
-  <div>Open Issues</div>
-  <div class="oc">0</div>
-</div>
-      <div class="di">Done Issues</div>
+
+    <div class="quick-links">Quick links</div>
+
+    <a href="#" class="issue-link">
+        <span>My open issues</span>
+        <span class="issue-count">0</span>
+    </a>
+    <a href="#" class="issue-link">Done issues</a>
+
+    <div class="board-section">
+        <span class="board-count">1</span>
+        <span>board</span>
+        <svg class="chevron-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
+        </svg>
     </div>
-  </div>
-  <div class="bl">Project Boards</div>
 </div>
-</div><div class="prj">
-  <div class="str1">
-  
-</div>
-  <div class="str2">
-<div class="pdesc">
-    <div class="pdesci"></div>
-    <div class="ppdesc">
-      <div class="nname"><h5>XYZ ERP system</h5></div>
-      <div class="ttype">Software Testing project</div>
+</div><div class="">
+<div class="issue-widget">
+    <div class="header">
+        <div class="icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
+            </svg>
+        </div>
+        <div>
+            <div class="title">XYZ ERP system</div>
+            <div class="subtitle">software development</div>
+        </div>
     </div>
-  </div>
-  <div class="more">
-    <h5>Overview and Quick Links</h5>
-    <div class="morec">
-      <div class="oi">
-  <div>Open Issues</div>
-  <div class="oc">1</div>
-</div>
-      <div class="di">Done Issues</div>
+
+    <div class="quick-links">Quick links</div>
+
+    <a href="#" class="issue-link">
+        <span>My open issues</span>
+        <span class="issue-count">0</span>
+    </a>
+    <a href="#" class="issue-link">Done issues</a>
+
+    <div class="board-section">
+        <span class="board-count">1</span>
+        <span>board</span>
+        <svg class="chevron-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
+        </svg>
     </div>
-  </div>
-  <div class="bl">Project Boards</div>
-</div>
-</div><div class="prj">
-  <div class="str1">
-  
-</div>
-  <div class="str2">
-<div class="pdesc">
-    <div class="pdesci"></div>
-    <div class="ppdesc">
-      <div class="nname"><h5>Data analysis and visualization</h5></div>
-      <div class="ttype">Statistic and Software Projects</div>
-    </div>
-  </div>
-  <div class="more">
-    <h5>Overview and Quick Links</h5>
-    <div class="morec">
-      <div class="oi">
-  <div>Open Issues</div>
-  <div class="oc">5</div>
-</div>
-      <div class="di">Done Issues</div>
-    </div>
-  </div>
-  <div class="bl">Project Boards</div>
 </div>
 </div>
     </article>
   </section><section id="issuesumary">
     <header id="issue">
-  <button class="issueh" style="background: none;">worked on</button><button class="issueh" style="background: none;">viewed</button><button class="issueh" style="background: green;">assigned to me</button><button class="issueh" style="background: none;">Starred</button>
+  <button class="issueh" style="background: green;">worked on</button><button class="issueh" style="background: none;">viewed</button><button class="issueh" style="background: green;">assigned to me</button><button class="issueh" style="background: none;">Starred</button>
     </header>
   <div id="wo" style="display: none;">
     <div class="issues" id="xza">
@@ -990,6 +1034,8 @@
 
 </table></div>
 </div>
+
+
 
 
 

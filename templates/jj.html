@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.tracking-widget {
+    width: 300px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    border: 1px solid #DFE1E6;
+    border-radius: 3px;
+    background: white;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #DFE1E6;
+    padding: 0;
+    margin: 0;
+}
+
+.tab {
+    padding: 8px 16px;
+    color: #42526E;
+    cursor: pointer;
+    font-size: 14px;
+    list-style: none;
+    position: relative;
+}
+
+.tab.active {
+    color: #0052CC;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #0052CC;
+}
+
+.content {
+    padding: 16px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.empty-state {
+    color: #42526E;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.work-link {
+    display: block;
+    color: #0052CC;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-top: 1px solid #DFE1E6;
+    font-size: 14px;
+}
+
+.work-link:hover {
+    background: #F4F5F7;
+}
+
+.nav-row {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #DFE1E6;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-row:hover {
+    background: #F4F5F7;
+}
+
+.nav-row.active {
+    background: #DEEBFF;
+}
+
+.issue-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    fill: #42526E;
+}
+
+.issue-details {
+    flex-grow: 1;
+}
+
+.issue-title {
+    font-size: 14px;
+    color: #172B4D;
+    margin-bottom: 2px;
+}
+
+.issue-meta {
+    font-size: 12px;
+    color: #6B778C;
+    display: flex;
+    gap: 8px;
+}
+
+.status-badge {
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.status-todo {
+    background: #DEEBFF;
+    color: #0052CC;
+}
+
+.status-progress {
+    background: #E3FCEF;
+    color: #006644;
+}
+
+.status-review {
+    background: #FFE380;
+    color: #172B4D;
+}
+</style>
+</head>
+<body>
+
+<div class="tracking-widget">
+    <ul class="tabs">
+        <li class="tab active">Assigned to me</li>
+        <li class="tab">Recent</li>
+        <li class="tab">Boards</li>
+    </ul>
+
+    <div class="content">
+        <!-- Assigned section -->
+        <div class="section active">
+            <a href="#" class="nav-row">
+                <svg class="issue-icon" viewBox="0 0 16 16">
+                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"/>
+                </svg>
+                <div class="issue-details">
+                    <div class="issue-title">Implement user authentication</div>
+                    <div class="issue-meta">
+                        <span>PRJ-123</span>
+                        <span class="status-badge status-todo">To Do</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="nav-row">
+                <svg class="issue-icon" viewBox="0 0 16 16">
+                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"/>
+                </svg>
+                <div class="issue-details">
+                    <div class="issue-title">Fix responsive layout bugs</div>
+                    <div class="issue-meta">
+                        <span>PRJ-124</span>
+                        <span class="status-badge status-progress">In Progress</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="nav-row">
+                <svg class="issue-icon" viewBox="0 0 16 16">
+                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"/>
+                </svg>
+                <div class="issue-details">
+                    <div class="issue-title">Update API documentation</div>
+                    <div class="issue-meta">
+                        <span>PRJ-125</span>
+                        <span class="status-badge status-review">In Review</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Recent section -->
+        <div class="section">
+            <a href="#" class="nav-row">
+                <svg class="issue-icon" viewBox="0 0 16 16">
+                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"/>
+                </svg>
+                <div class="issue-details">
+                    <div class="issue-title">Optimize database queries</div>
+                    <div class="issue-meta">
+                        <span>Updated 2h ago</span>
+                        <span class="status-badge status-progress">In Progress</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="nav-row">
+                <svg class="issue-icon" viewBox="0 0 16 16">
+                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"/>
+                </svg>
+                <div class="issue-details">
+                    <div class="issue-title">Add unit tests</div>
+                    <div class="issue-meta">
+                        <span>Updated 1d ago</span>
+                        <span class="status-badge status-todo">To Do</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Boards section -->
+        <div class="section">
+            <a href="#" class="nav-row">
+                <div class="issue-details">
+                    <div class="issue-title">Development Board</div>
+                    <div class="issue-meta">8 active issues</div>
+                </div>
+            </a>
+            <a href="#" class="nav-row">
+                <div class="issue-details">
+                    <div class="issue-title">QA Testing Board</div>
+                    <div class="issue-meta">3 active issues</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <a href="#" class="work-link">Go to Your Work page</a>
+</div>
+
+</body>
+</html>
