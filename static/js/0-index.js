@@ -79,7 +79,7 @@ jQuery(document).ready(function(){
     jQuery('#init').css('background', '#1abc9c')
   })
   jQuery('.IS').bind('click', function(event){
-    jQuery('.IS').css('background', 'inherit')
+    jQuery('.IS').css('background', '#34495e')
     jQuery(this).css('background', '#1abc9c')
     if (jQuery(this).text().replace(/\s+/g, '').trim() == 'Summary') {
       jQuery('#sumc').css('display', 'block')
