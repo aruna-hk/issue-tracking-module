@@ -20,9 +20,12 @@
 #fff {
   margin-top: 5em;
   width: 60%;
-  height: 500px;
+  height: 560px;
   background: #dfebe0;
   border-radius: 10px;
+}
+.sect1{
+  max-height: 450px;
   overflow: scroll;
 }
 #fff header{
@@ -223,6 +226,7 @@
   gap:1rem;
   margin-top: 1em;
   max-height: 85vh;
+  min-height: 70vh;
 }
 
 #main2 {
@@ -809,7 +813,7 @@ button {
     fill: white;
 }
 
-.title {
+.title, .item{
     font-size: 14px;
     font-weight: 500;
     color: #172B4D;
@@ -1095,3 +1099,25 @@ button {
 }
 
 
+#loginp {
+  display: none;
+  z-index: 2;
+  border-radius: 0.5em; 
+}
+#loginp form {
+  border-radius: 0.5em; 
+}
+
+.item:hover {
+  background: ghostwhite;
+  margin: 10px;
+  border-radius: 20%; 
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+#strr {
+  margin: 2em;
+}
+#wo, #stm, #viewdd{
+  margin: 0 2em; 
+}

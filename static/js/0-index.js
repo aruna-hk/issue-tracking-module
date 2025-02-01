@@ -1,4 +1,39 @@
 jQuery(document).ready(function(){
+  jQuery('.issueh').css('background', 'none')
+  jQuery(jQuery('.issueh')[0]).css('background', 'green')
+  jQuery('#issuesumary>div').css('display', 'none')
+  jQuery(jQuery('#issuesumary>div')[0]).css('display', 'block')
+  jQuery('.issueh').bind('click', function(event){
+    jQuery('.issueh').css('background', 'none')
+    jQuery(this).css('background', 'green')
+    jQuery('#issuesumary>div').css('display', 'none')
+    if (this.textContent == 'worked on') {
+      jQuery(jQuery('#issuesumary>div')[0]).css('display', 'block')
+    } else if (this.textContent == 'viewed'){
+      jQuery(jQuery('#issuesumary>div')[1]).css('display', 'block')
+    } else if (this.textContent == 'assigned to me') {
+      jQuery(jQuery('#issuesumary>div')[2]).css('display', 'block')
+    } else {
+      jQuery(jQuery('#issuesumary>div')[3]).css('display', 'block')
+    }
+  })
+  jQuery('#fc>button, #fc>div').bind('click', function(event){
+    //log issue
+    jQuery('#ff').css('display', 'none')
+  })
+  jQuery('.tab').bind('click', function(event){
+    event.stopPropagation()
+    jQuery('.tab').attr('class', 'tab')
+    jQuery(this).attr('class', 'tab active')
+    jQuery('.section').attr('class', 'section')
+    if (this.textContent == 'Assigned to me') {
+      jQuery(jQuery('.section')[0]).attr('class', 'section active')
+    } else if (this.textContent == 'Recent') {
+      jQuery(jQuery('.section')[1]).attr('class', 'section active')
+    } else {
+      jQuery(jQuery('.section')[2]).attr('class', 'section active')
+    }
+  })
   jQuery('#Capa_1').bind('click', function(event){
     event.stopPropagation()
     jQuery('#ff').css('display', 'none')
