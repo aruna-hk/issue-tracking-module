@@ -1121,3 +1121,30 @@ button {
 #wo, #stm, #viewdd{
   margin: 0 2em; 
 }
+.qp {
+  display: flex;
+}
+.qp >div {
+  color: #42526E;
+  font-size: 14px;
+}
+.tass {
+  max-height: 350px;
+  overflow: scroll;
+}
+.tass >div {
+  margin: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  gap: em;
+}
+.r1 > div{
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.r1 {
+  display: flex;
+  flex-flow: wrap;
+}

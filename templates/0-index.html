@@ -3,13 +3,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/static/css/0.css">
+    <link rel="stylesheet" href="/static/css/dash.css">
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/js/0-index.js"></script>
   </head>
   <body>
 
 
-  <div id="ff">
+  <div id="ff" style="display: none;">
     <div id="fff">
   <header>
     <div>Create Issue</div>
@@ -95,7 +96,7 @@
   </div>
   <div class="headerdiv">My work
   
-  <div class="p09">
+  <div class="p09" style="display: none;">
   <ul class="tabs">
         <li class="tab active">Assigned to me</li>
         <li class="tab">Recent</li>
@@ -201,7 +202,7 @@
 </svg>
 </div>
   <div class="headerdiv">Projects
-  <div id="p099" class="p09">
+  <div id="p099" class="p09" style="display: none;">
   <div class="section-header">Recent</div><a href="#" class="project-item">
         <div class="project-icon">
             <svg viewBox="0 0 24 24">
@@ -246,7 +247,7 @@
 
 
 <div id="usr">
-  <div id="usrr" display="block">
+  <div id="usrr" display="block" style="display: none;">
           <div class="dropdown-item">
             Account
             <span class="manage-link">Manage account →</span>
@@ -257,7 +258,7 @@
         <div class="dropdown-item">Personal settings</div>
         
         <div class="dropdown-item">Theme</div>
-        <div class="dropdown-item"><a href={% url 'logout' %}>Log out</a></div>
+        <div class="dropdown-item"><a href="/logout/">Log out</a></div>
 </div><img src="/static/img/pp.png" alt="profile picture">
   
 </div>
@@ -266,7 +267,7 @@
 
   </nav>
 </header>
-    <main id="main1">
+    <main id="main1" style="display: block;">
   
   <section id="projects">
   <div id="projh">
@@ -338,9 +339,9 @@
     </article>
   </section><section id="issuesumary">
     <header id="issue">
-  <button class="issueh" style="background: green;">worked on</button><button class="issueh" style="background: none;">viewed</button><button class="issueh" style="background: green;">assigned to me</button><button class="issueh" style="background: none;">Starred</button>
+  <button class="issueh" style="background: green;">worked on</button><button class="issueh" style="background: none;">viewed</button><button class="issueh" style="background: none;">assigned to me</button><button class="issueh" style="background: none;">Starred</button>
     </header>
-  <div id="wo" style="display: none;">
+  <div id="wo" style="display: block;">
     <div class="issues" id="xza">
   <h3>Today</h3>
   <div class="container">
@@ -462,7 +463,7 @@
     </div>
     </div></div></div>
 </div>
-  </div><div id="stm" style="display: block;">
+  </div><div id="stm" style="display: none;">
     <div class="issues" id="xza">
   <h3>Today</h3>
   <div class="container">
@@ -582,7 +583,7 @@
   </div>
   </section>
     </main>
-  <main id="main2">
+  <main id="main2" style="display: none;">
 <nav>
  <button class="IS" id="init">Summary</button><button class="IS">Timeline</button><button class="IS">Board</button><button class="IS">List</button>
 
@@ -593,7 +594,7 @@
 <section>
   <h3>projects/<span id="prname">issues tracking</span></h3>
 
-<div id="tlm">
+<div id="tlm" style="display: none;">
     <h4>Timeline</h4>
   <div style="width: 1000px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
     <div style="display: flex;">
@@ -686,7 +687,7 @@
 
 
 
-<div id="lll">
+<div id="lll" style="display: none;">
   <header>
   <h4>List</h4>
   <header id="str1">
@@ -787,7 +788,7 @@
 
 </table></div>
 </div>
-<div id="ccc">
+<div id="ccc" style="display: none;">
   <h4>Board</h4>
   <section class="board">
    <div class="column" id="todo">
@@ -823,7 +824,7 @@
   </section>
 </div>
 
-<div id="sumc">
+<div id="sumc" style="display: block;">
   <h4>Summary</h4>
   <section class="ll">
 
@@ -868,7 +869,7 @@
 
   <div class="r1">
 
-   <div style="width: 300px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
+   <div>
     <h3 style="margin: 0 0 8px 0; color: #344563; font-size: 16px;">Status overview</h3>
     <p style="margin: 0 0 20px 0; color: #42526E; font-size: 14px;">
       Get a snapshot of the status of your issues. 
@@ -909,20 +910,18 @@
     </div>
   </div>
 
-<div style="width: 300px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
-    <h3 style="margin: 0 0 8px 0; color: #344563; font-size: 16px;">Team workload</h3>
-    <p style="margin: 0 0 20px 0; color: #42526E; font-size: 14px;">
-      Monitor the capacity of your team. 
-      <a href="#" style="color: #0052CC; text-decoration: none;">Reassign issues to get the right balance</a>
+<div>
+    <h3>Assignment workload</h3>
+    <p>Workload monitoring and <a href="#" style="color: #0052CC; text-decoration: none;">Reassignment to balance work among employees</a>
     </p>
 
-    <div style="margin-bottom: 16px;">
-      <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+    <div class="tass" style="margin-bottom: 16px;">
+      <div>
         <div style="color: #42526E; font-size: 12px;">Assignee</div>
-        <div style="color: #42526E; font-size: 12px;">Work distribution</div>
+        <div style="color: #42526E; font-size: 12px;">Work load distribution</div>
       </div>
 
-      <div style="display: flex; align-items: center; gap: 12px;">
+      <div class="llm" style="display: flex; align-items: center; gap: 12px;">
         <div style="display: flex; align-items: center; min-width: 120px;">
           <!-- User avatar -->
           <svg width="24" height="24" viewBox="0 0 24 24" style="margin-right: 8px;">
@@ -935,71 +934,102 @@
         <!-- Progress bar container -->
         <div style="flex-grow: 1; height: 24px; background: #DFE1E6; border-radius: 3px; overflow: hidden;">
           <!-- Progress bar -->
-          <div style="width: 100%; height: 100%; background: #6B778C; display: flex; align-items: center; padding: 0 8px;">
-            <span style="color: white; font-size: 12px;">100%</span>
+          <div style="width: 20%; height: 100%; background: #6B778C; display: flex; align-items: center; padding: 0 8px;">
+            <span style="color: white; font-size: 12px;">20%</span>
+          </div>
+        </div>
+      </div><div class="llm">
+        <div class="qp">
+          <!-- User avatar -->
+          <img height="24" width="24" src="/static/img/pp.png">
+  <div>Kiptoo haron</div>
+</div>
+
+        <!-- Progress bar container -->
+        <div style="flex-grow: 1; height: 24px; background: #DFE1E6; border-radius: 3px; overflow: hidden;">
+          <!-- Progress bar -->
+          <div style="width: 65%; height: 100%; background: #6B778C; display: flex; align-items: center; padding: 0 8px;">
+            <span style="color: white; font-size: 12px;">65%</span>
+          </div>
+        </div>
+      </div><div class="llm">
+        <div class="qp">
+          <!-- User avatar -->
+          <img height="24" width="24" src="/static/img/pp.png">
+  <div>Victor mutwiri</div>
+</div>
+
+        <!-- Progress bar container -->
+        <div style="flex-grow: 1; height: 24px; background: #DFE1E6; border-radius: 3px; overflow: hidden;">
+          <!-- Progress bar -->
+          <div style="width: 15%; height: 100%; background: #6B778C; display: flex; align-items: center; padding: 0 8px;">
+            <span style="color: white; font-size: 12px;">15%</span>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-<div style="width: 300px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
-    <h3 style="margin: 0 0 8px 0; color: #344563; font-size: 16px;">Types of work</h3>
-    <p style="margin: 0 0 20px 0; color: #42526E; font-size: 14px;">
+<div class="tcat">
+    <h3>Types of work</h3>
+    <p>
       Get a breakdown of issues by their types. 
       <a href="#" style="color: #0052CC; text-decoration: none;">View all items</a>
     </p>
 
-    <div style="margin-bottom: 16px;">
-      <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-        <div style="color: #42526E; font-size: 12px;">Type</div>
-        <div style="color: #42526E; font-size: 12px;">Distribution</div>
+    <div class="tcatc">
+      <div class="tcatch">
+        <div>Type</div>
+        <div>Distribution</div>
       </div>
 
       <!-- Task Row -->
-      <div style="display: flex; align-items: center; margin-bottom: 12px; gap: 12px;">
-        <div style="display: flex; align-items: center; min-width: 100px;">
+      <div class="tcatcc">
+        <div>
           <svg width="16" height="16" viewBox="0 0 16 16" style="margin-right: 8px;">
             <rect width="16" height="16" rx="3" fill="#4BADE8"></rect>
             <path d="M4 8.5L7 11.5L12 4.5" stroke="white" stroke-width="2" fill="none"></path>
           </svg>
           <span style="color: #42526E; font-size: 14px;">Task</span>
         </div>
-        <div style="flex-grow: 1; height: 16px; background: #DFE1E6; border-radius: 3px; overflow: hidden;">
-          <div style="width: 71%; height: 100%; background: #6B778C; display: flex; align-items: center;">
-            <span style="color: white; font-size: 12px; margin-left: 8px;">71%</span>
+        <div>
+          <div style="width: 60%; height: 100%; background: #6B778C; display: flex; align-items: center;">
+            <span style="color: white; font-size: 12px; margin-left: 8px;">60%</span>
           </div>
         </div>
-      </div>
-
-      <!-- Epic Row -->
-      <div style="display: flex; align-items: center; margin-bottom: 12px; gap: 12px;">
-        <div style="display: flex; align-items: center; min-width: 100px;">
+      </div><div class="tcatcc">
+        <div>
           <svg width="16" height="16" viewBox="0 0 16 16" style="margin-right: 8px;">
             <rect width="16" height="16" rx="3" fill="#8777D9"></rect>
             <path d="M4 8L8 4L12 8L8 12L4 8Z" fill="white"></path>
           </svg>
-          <span style="color: #42526E; font-size: 14px;">Epic</span>
+          <span style="color: #42526E; font-size: 14px;">Feature request</span>
         </div>
-        <div style="flex-grow: 1; height: 16px; background: #DFE1E6; border-radius: 3px; overflow: hidden;">
-          <div style="width: 29%; height: 100%; background: #6B778C; display: flex; align-items: center;">
-            <span style="color: white; font-size: 12px; margin-left: 8px;">29%</span>
+        <div>
+          <div style="width: 20%; height: 100%; background: #6B778C; text-align: center">
+            <span style="color: white; font-size: 12px; margin-left: 8px;">20%</span>
+          </div>
+        </div>
+      </div><div class="tcatcc">
+        <div>
+          <svg width="16" height="16" viewBox="0 0 16 16" style="margin-right: 8px;">
+            <rect width="16" height="16" rx="3" fill="#4BADE8"></rect>
+            <path d="M4 8.5L7 11.5L12 4.5" stroke="white" stroke-width="2" fill="none"></path>
+          </svg>
+          <span style="color: #42526E; font-size: 14px;">Task</span>
+        </div>
+        <div>
+          <div style="width: 20%; height: 100%; background: #6B778C; display: flex; align-items: center;">
+            <span style="color: white; font-size: 12px; margin-left: 8px;">20%</span>
           </div>
         </div>
       </div>
 
+      
+      
+
       <!-- Subtask Row -->
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <div style="display: flex; align-items: center; min-width: 100px;">
-          <svg width="16" height="16" viewBox="0 0 16 16" style="margin-right: 8px;">
-            <rect width="16" height="16" rx="3" fill="#4BADE8"></rect>
-            <path d="M4 8H12M8 4V12" stroke="white" stroke-width="2"></path>
-          </svg>
-          <span style="color: #42526E; font-size: 14px;">Subtask</span>
-        </div>
-        <div style="flex-grow: 1; height: 16px; background: #DFE1E6; border-radius: 3px; overflow: hidden;">
-        </div>
-      </div>
+      
     </div>
   </div>
 
@@ -1011,7 +1041,7 @@
     </div>
   </section>
 </main>
-<div id="ppp">
+<div id="ppp" style="display: none;">
   <header>
     <div id="strip1">
     <h2>Projects</h2>
@@ -1077,4 +1107,7 @@
 
 
 
-</body></html>
+
+
+</body>
+</html>

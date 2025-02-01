@@ -1,0 +1,30 @@
+.tcat {
+  display: flex;
+  flex-direction: column;
+}
+.tcatc {
+  display: flex;
+  flex-direction: column;
+}
+.tcatch {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px;
+  margin-bottom: 8px;
+}
+.tcatch div {
+  margin: 4px;
+  color: #42526E;
+  font-size: 12px;
+}
+.tcatcc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0.3em;
+}
+.tcatcc:hover, .llm:hover{
+  cursor: pointer;
+  transition: ease 0.3s;
+  background: ghostwhite;
+  margin: 10px;
+}
