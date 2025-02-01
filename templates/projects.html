@@ -1,58 +1,60 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block head %}
-<meta charset=utf-8>
-<meta name=viewport content=width=device-width>
-<title>ISSUE TICKETING AND TRACKING</title>
-<link rel=stylesheet href={% static 'css/dashboard_header.css' %}>
-<link rel=stylesheet href={% static 'css/dashboard.css' %}>
-<link rel=stylesheet href={% static 'css/project.css' %}>
-{% endblock head %}
-{% block body %}
-<header>
-  {% include 'header.html' %}
-</header>
-<main>
-  <section id=projects-assgn>
-   <table>
-    <caption><h3>Project-Issues overview</h3></caption>
-    <thead>
-      <th>ProjectId</th>
-      <th>Name</th>
-      <th>No.of Modules</a></th>
-      <th>Start date</th>
-      <th>Expected end date</th>
-      <th>Total issues</th>
-    </thead>
-    <tbody>
-      {% for project in projects %}
-      <tr>
-          <td>{{project.id}}</td>
-          <td class="project">
-            <a href="">{{project.project_title}}</a>
-            <div class=prj>
-              Description: {{project.description}}
-            </div>
-          </td>
-          <td><a href="">{{project.modules}}</a>  <a href="">+</a></td>
-          <td>{{project.start_date}}</td>
-          <td>{{project.end_date}}</td>
-          <td>{{project.issues}}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-   </table>
-  </section>
-  <h3>Module Based issue summary</h3>
-  <section id=projectassgn>
-    {% for module in modules %}
-      <div>
-        <div>project: <span>{{module.assoc_project}}</span></div>
-        <div>Module: <span>{{module.title}}</span></div>
-        <div>Unresolved Issues: <span>{{module.issues}}</span></div>
-        <div>assigned_to:<a href="">{{module.assigned_to}}</a></div>
-      </div>
-    {% endfor %}
-  </section>
-</main>
-{% endblock body %}
+<div id="ppp">
+  <header>
+    <div id="strip1">
+    <h2>Projects</h2>
+    <button>Create project</button>
+    </div>
+    <input type="text" placeholder="Search project">
+  </header>
+  <div id="pta" class="table-container"><table class="projects-table">
+ <thead>
+   <tr class="table-header">
+     <th>
+       <button class="sort-button">Name</button>
+      </th><th>
+       <button class="sort-button">Project ID</button>
+     </th>
+     
+      <th>
+        <button class="sort-button">Type</button>
+      </th>
+      <th>
+        <button class="sort-button">Lead
+          
+        </button>
+       </th>
+       <th>
+         <button class="sort-button">Project URL
+  
+</button></th><th>
+         <button class="sort-button">More Actions</button></th></tr></thead>
+
+
+<tbody><tr class="table-row"><td class="table-cell">Issue Tracking module</td><td class="table-cell">PRJ-001</td><td class="table-cell">Software development</td><td class="table-cell">
+  <div id="tui">
+    <img src="/static/img/pp.png" width="24px" height="24px">
+    kiptoo
+  </div>
+</td><td class="table-cell">
+<url>Http://127.0.0.1:8089
+  </url>
+</td><td class="table-cell">
+  <svg height="8" width="40">
+    <circle fill="black" r="4" cy="4" cx="4"></circle><circle fill="black" r="4" cy="4" cx="20"></circle><circle fill="black" r="4" cy="4" cx="36"></circle>
+       </svg>
+</td></tr><tr class="table-row"><td class="table-cell">company XYZ ERP system</td><td class="table-cell">PRJ-002</td><td class="table-cell">Business Process re-engineering</td><td class="table-cell">
+  <div id="tui">
+    <img src="/static/img/pp.png" width="24px" height="24px">
+    kiptoo
+  </div>
+</td><td class="table-cell">
+<url>Http://127.0.0.1:8089
+  </url>
+</td><td class="table-cell">
+  <svg height="8" width="40">
+    <circle fill="black" r="4" cy="4" cx="4"></circle><circle fill="black" r="4" cy="4" cx="20"></circle><circle fill="black" r="4" cy="4" cx="36"></circle>
+       </svg>
+</td></tr></tbody>
+
+</table></div>
+</div>

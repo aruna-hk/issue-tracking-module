@@ -75,8 +75,12 @@ jQuery(document).ready(function(){
     event.stopPropagation()
     jQuery('#ppp, #main1, .p09').css('display', 'none')
     jQuery('#main2').css('display', 'grid')
+    jQuery('#init').click()
+    jQuery('#init').css('background', '#1abc9c')
   })
   jQuery('.IS').bind('click', function(event){
+    jQuery('.IS').css('background', 'inherit')
+    jQuery(this).css('background', '#1abc9c')
     if (jQuery(this).text().replace(/\s+/g, '').trim() == 'Summary') {
       jQuery('#sumc').css('display', 'block')
       jQuery('#lll, #tlm, #ccc').css('display', 'none')

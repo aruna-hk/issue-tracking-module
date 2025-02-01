@@ -1,3 +1,10 @@
+#str1>input {
+  height: 35px;
+  font-size: 18px;
+}
+#ffoot {
+  border-top: solid 1px
+}
 #ff{
   z-index: 4;
 }

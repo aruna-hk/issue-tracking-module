@@ -1,156 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-.tracking-widget {
-    width: 300px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    border: 1px solid #DFE1E6;
-    border-radius: 3px;
-    background: white;
-}
-
-.tabs {
-    display: flex;
-    border-bottom: 2px solid #DFE1E6;
-    padding: 0;
-    margin: 0;
-}
-
-.tab {
-    padding: 8px 16px;
-    color: #42526E;
-    cursor: pointer;
-    font-size: 14px;
-    list-style: none;
-    position: relative;
-}
-
-.tab.active {
-    color: #0052CC;
-}
-
-.tab.active::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: #0052CC;
-}
-
-.content {
-    padding: 16px;
-}
-
-.section {
-    display: none;
-}
-
-.section.active {
-    display: block;
-}
-
-.empty-state {
-    color: #42526E;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-}
-
-.work-link {
-    display: block;
-    color: #0052CC;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-top: 1px solid #DFE1E6;
-    font-size: 14px;
-}
-
-.work-link:hover {
-    background: #F4F5F7;
-}
-
-.nav-row {
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    cursor: pointer;
-    border-bottom: 1px solid #DFE1E6;
-    text-decoration: none;
-    color: inherit;
-}
-
-.nav-row:hover {
-    background: #F4F5F7;
-}
-
-.nav-row.active {
-    background: #DEEBFF;
-}
-
-.issue-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-    fill: #42526E;
-}
-
-.issue-details {
-    flex-grow: 1;
-}
-
-.issue-title {
-    font-size: 14px;
-    color: #172B4D;
-    margin-bottom: 2px;
-}
-
-.issue-meta {
-    font-size: 12px;
-    color: #6B778C;
-    display: flex;
-    gap: 8px;
-}
-
-.status-badge {
-    padding: 2px 4px;
-    border-radius: 3px;
-    font-size: 12px;
-}
-
-.status-todo {
-    background: #DEEBFF;
-    color: #0052CC;
-}
-
-.status-progress {
-    background: #E3FCEF;
-    color: #006644;
-}
-
-.status-review {
-    background: #FFE380;
-    color: #172B4D;
-}
-</style>
-</head>
-<body>
-
-<div class="tracking-widget">
-    <ul class="tabs">
+<header id="bodyheader">
+  <nav>
+    <div>
+      <div class="headerdiv" id="hstrip">
+        <h1>Dashboard</h1> 
+      </div>
+      <div class="headerdiv">My work
+       <div class="p09" style="display: none;">
+  <ul class="tabs">
         <li class="tab active">Assigned to me</li>
         <li class="tab">Recent</li>
         <li class="tab">Boards</li>
-    </ul>
-
-    <div class="content">
+    </ul><div class="content">
         <!-- Assigned section -->
         <div class="section active">
             <a href="#" class="nav-row">
                 <svg class="issue-icon" viewBox="0 0 16 16">
-                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"/>
+                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"></path>
                 </svg>
                 <div class="issue-details">
                     <div class="issue-title">Implement user authentication</div>
@@ -163,7 +28,7 @@
 
             <a href="#" class="nav-row">
                 <svg class="issue-icon" viewBox="0 0 16 16">
-                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"/>
+                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"></path>
                 </svg>
                 <div class="issue-details">
                     <div class="issue-title">Fix responsive layout bugs</div>
@@ -176,7 +41,7 @@
 
             <a href="#" class="nav-row">
                 <svg class="issue-icon" viewBox="0 0 16 16">
-                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"/>
+                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"></path>
                 </svg>
                 <div class="issue-details">
                     <div class="issue-title">Update API documentation</div>
@@ -192,7 +57,7 @@
         <div class="section">
             <a href="#" class="nav-row">
                 <svg class="issue-icon" viewBox="0 0 16 16">
-                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"/>
+                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"></path>
                 </svg>
                 <div class="issue-details">
                     <div class="issue-title">Optimize database queries</div>
@@ -205,7 +70,7 @@
 
             <a href="#" class="nav-row">
                 <svg class="issue-icon" viewBox="0 0 16 16">
-                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"/>
+                    <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"></path>
                 </svg>
                 <div class="issue-details">
                     <div class="issue-title">Add unit tests</div>
@@ -233,9 +98,81 @@
             </a>
         </div>
     </div>
+</div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="20px" width="20px" style="display: block;">
 
-    <a href="#" class="work-link">Go to Your Work page</a>
+<rect x="0" fill="none" width="30" height="30"></rect>
+
+<g>
+
+<path d="M7 10l5 5 5-5"></path>
+
+</g>
+
+</svg>
+</div>
+  <div class="headerdiv">Projects
+  <div id="p099" class="p09" style="display: none;">
+  <div class="section-header">Recent</div><a href="#" class="project-item">
+        <div class="project-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
+            </svg>
+        </div>
+        <div class="project-info">
+            <div class="project-title">issuetracking</div>
+            <div class="project-subtitle">Software project</div>
+        </div>
+        <div class="more-menu">⋯</div>
+    </a><a href="#" class="project-item">
+        <div class="project-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
+            </svg>
+        </div>
+        <div class="project-info">
+            <div class="project-title">XYZ ERP system</div>
+            <div class="project-subtitle">Software project</div>
+        </div>
+        <div class="more-menu">⋯</div>
+    </a><div class="bottom-links">
+        <a href="#" class="bottom-link">View all projects</a>
+        <a href="#" class="bottom-link">Create project</a>
+    </div>
+  </div>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="20px" width="20px" style="display: block;">
+
+<rect x="0" fill="none" width="30" height="30"></rect>
+
+<g>
+
+<path d="M7 10l5 5 5-5"></path>
+
+</g>
+
+</svg></div>
+  <button class="headerdiv">Create</button>
+  </div>
+
+
+
+<div id="usr">
+  <div id="usrr" display="block" style="display: none;">
+          <div class="dropdown-item">
+            Account
+            <span class="manage-link">Manage account →</span>
+        </div>
+        
+        
+        <div class="dropdown-item">Profile</div>
+        <div class="dropdown-item">Personal settings</div>
+        
+        <div class="dropdown-item">Theme</div>
+        <div class="dropdown-item"><a href="/logout/">Log out</a></div>
+</div><img src="/static/img/pp.png" alt="profile picture">
+  
 </div>
 
-</body>
-</html>
+
+
+  </nav>
+</header>
