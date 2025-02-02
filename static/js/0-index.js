@@ -1,4 +1,11 @@
 jQuery(document).ready(function(){
+  jQuery('.prjisclose').bind('click', function(event){
+    jQuery('#openi').css('display', 'none')
+  })
+  jQuery('.card, .tmlis,.container>.item, .nav-row').bind('click', function(event){
+    jQuery('#openi').css('display', 'flex')
+  })
+
   jQuery('.issueh').css('background', 'none')
   jQuery(jQuery('.issueh')[0]).css('background', 'green')
   jQuery('#issuesumary>div').css('display', 'none')
@@ -71,7 +78,7 @@ jQuery(document).ready(function(){
     jQuery('.p09').css('display', 'none')
     jQuery('#usrr').css('display', 'block')
   })
-  jQuery('.project-item').bind('click', function(event){
+  jQuery('.row1, .project-item, .issue-widget>.header').bind('click', function(event){
     event.stopPropagation()
     jQuery('#ppp, #main1, .p09').css('display', 'none')
     jQuery('#main2').css('display', 'grid')

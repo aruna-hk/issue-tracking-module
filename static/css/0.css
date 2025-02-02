@@ -1,3 +1,106 @@
+.tmlis:hover{
+  cursor: pointer;
+  text-decoration: green underline;
+}
+.row1:hover, .rowusr:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+#openi{
+  z-index: 3;
+}
+.ra{
+  border-right: solid 1px
+}
+.prjisclose:hover{
+  transition: 0.3s;
+  transform: rotate(60deg);
+  color: red;
+  cursor: pointer;
+}
+.prjis:hover{
+  text-decoration: underline;
+  color: green;
+  cursor: pointer;
+}
+.iop > header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+.prjisclose{
+  margin-right: 0.5em; 
+}
+.prjis{
+  margin-left: 0.5em;
+}
+
+.issue-widget .header:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+#openi{
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 98%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.iop{
+  border-radius: 1em;
+  width: 80%;
+  background: gainsboro;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+}
+.iop > header{
+  height: 30px;
+  background: pink;
+}
+.iiop{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.iiop article{
+  background: black;
+}
+.upd{
+  display: flex;
+  flex-flow: wrap;
+}
+.optupdate{
+  margin: 5px;
+}
+.cmts{
+  height: 200px;
+  overflow: scroll;
+}
+.cmt{
+  display: grid;
+  grid-template-columns: 0.5fr 3fr;
+}
+.cmts header{
+  display: flex;
+  justify-content: space-between;
+}
+.cmt img{
+  float: left;
+}
+.entry{
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em 1em
+}
+
+.issue-widget .header:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
 #str1>input {
   height: 35px;
   font-size: 18px;
