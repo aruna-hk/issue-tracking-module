@@ -8,6 +8,9 @@ function project_form(){
 }
 
 jQuery(document).ready(function(){
+  jQuery('.p09, .boardlist, #usrr').on('mouseleave', function(){
+    jQuery(this).css('display', 'none')
+  })
   jQuery('.cxc').bind('click', function(event){
     event.stopPropagation()
     jQuery('#issuepopup').css('display', 'none')
