@@ -1,0 +1,70 @@
+<div class="calendar-container">
+    <div class="header">
+        <div class="view-controls">
+            <button class="btn">Day</button>
+            <button class="btn active">Week</button>
+            <button class="btn">Month</button>
+            
+            <div class="filter-button">
+                <button class="btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="calendar-nav">
+            <button class="btn">&lt;</button>
+            <div class="date-display">February 2-8, 2025</div>
+            <button class="btn">&gt;</button>
+            <button class="btn">Today</button>
+        </div>
+    </div>
+
+    <div class="calendar-grid">
+        <div class="weekdays">
+            <div class="weekday">Sunday</div>
+            <div class="weekday">Monday</div>
+            <div class="weekday">Tuesday</div>
+            <div class="weekday">Wednesday</div>
+            <div class="weekday">Thursday</div>
+            <div class="weekday">Friday</div>
+            <div class="weekday">Saturday</div>
+        </div>
+
+        <div class="time-slots">
+            <div class="time-labels">
+                <div class="time-label">00:00</div>
+                <div class="time-label">01:00</div>
+                <div class="time-label">02:00</div>
+                <!-- More time labels... -->
+            </div>
+
+            <div class="events-grid">
+                <div class="day-column">
+                    <div class="issue-event priority-high" style="top: 120px; height: 90px;">
+                        <div class="issue-title">#123 Payment Bug</div>
+                        <div class="issue-meta">Sarah J. • 2h</div>
+                    </div>
+                </div>
+                <div class="day-column"></div>
+                <div class="day-column">
+                    <div class="issue-event priority-medium" style="top: 240px; height: 60px;">
+                        <div class="issue-title">#124 UI Update</div>
+                        <div class="issue-meta">Mike S. • 1h</div>
+                    </div>
+                </div>
+                <div class="day-column"></div>
+                <div class="day-column">
+                    <div class="issue-event priority-low" style="top: 360px; height: 120px;">
+                        <div class="issue-title">#125 Documentation</div>
+                        <div class="issue-meta">John D. • 3h</div>
+                    </div>
+                </div>
+                <div class="day-column"></div>
+                <div class="day-column"></div>
+            </div>
+        </div>
+    </div>
+</div>

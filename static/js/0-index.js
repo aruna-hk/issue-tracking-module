@@ -1,9 +1,55 @@
+function project_form(){
+   project = {}
+  for (item of jQuery('.form-group>input, .form-group>select, .form-group>textarea')){
+     project[item.name] = item.value 
+    console.log(item.value)
+  }
+  return project
+}
+
 jQuery(document).ready(function(){
+  jQuery('.cxc').bind('click', function(event){
+    event.stopPropagation()
+    jQuery('#issuepopup').css('display', 'none')
+  })
+  jQuery('.board-section>div').bind('click', function(event){
+    event.stopPropagation()
+    console.log('-----')
+    console.log(event.currentTarget.lastElementChild.lastElementChild)
+    jQuery(event.currentTarget.lastElementChild.lastElementChild).css('display', 'block')
+  })
+  jQuery('.form-container').bind('click', function(event){
+    event.stopPropagation()
+  })
+  jQuery('.fcont').bind('click', function(event){
+    jQuery('.fcont').css('display', 'none')
+  })
+  jQuery('#projectForm>button').bind('click', function(event){
+    event.stopPropagation()
+    project = project_form()
+    console.log(project)
+    console.log(JSON.stringify(project))
+    fetch('http://localhost:8000/projects/', {
+      method: 'POST',
+      headers: {'content-type': 'application/json', 'X-CSRFToken': jQuery('#projectForm>input')[0].value},
+      body: JSON.stringify(project)
+    }).then((response)=>{
+       if (response.ok){
+         if (response.status == 201){
+           jQuery('.fcont').css('display', 'none')
+         }
+       }
+    })
+  })
+
+  jQuery('#strip1>button').bind('click', function(event){
+    jQuery('.fcont').css('display', 'flex')
+  })
   jQuery('.prjisclose').bind('click', function(event){
     jQuery('#openi').css('display', 'none')
   })
-  jQuery('.card, .tmlis,.container>.item, .nav-row').bind('click', function(event){
-    jQuery('#openi').css('display', 'flex')
+  jQuery('.issue-event, .card, .tmlis,.container>.item, .nav-row').bind('click', function(event){
+    jQuery('#issuepopup').css('display', 'flex')
   })
 
   jQuery('.issueh').css('background', 'none')
@@ -24,9 +70,10 @@ jQuery(document).ready(function(){
       jQuery(jQuery('#issuesumary>div')[3]).css('display', 'block')
     }
   })
-  jQuery('#fc>button, #fc>div').bind('click', function(event){
+  jQuery('.cbtn-secondary, .cbtn-primary').bind('click', function(event){
     //log issue
-    jQuery('#ff').css('display', 'none')
+    event.stopPropagation()
+    jQuery('#cfff').css('display', 'none')
   })
   jQuery('.tab').bind('click', function(event){
     event.stopPropagation()
@@ -43,7 +90,12 @@ jQuery(document).ready(function(){
   })
   jQuery('#Capa_1').bind('click', function(event){
     event.stopPropagation()
-    jQuery('#ff').css('display', 'none')
+    jQuery('#cfff').css('display', 'none')
+  })
+  jQuery(jQuery('.bottom-link')[1]).bind('click', function(event){
+    event.stopPropagation()
+    jQuery('.p09').css('display', 'none')
+    jQuery('.fcont').css('display', 'flex')
   })
   jQuery(jQuery('.bottom-link')[0]).bind('click', function(event){
     event.stopPropagation()
@@ -70,7 +122,7 @@ jQuery(document).ready(function(){
       }
     }
     if (event.currentTarget.textContent == 'Create') {
-      jQuery('#ff').css('display', 'flex')
+      jQuery('#cfff').css('display', 'flex')
     }
   })
   jQuery('#usr').bind('click', function(event){

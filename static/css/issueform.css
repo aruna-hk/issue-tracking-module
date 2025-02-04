@@ -1,0 +1,112 @@
+#Capa_1:hover{
+    cursor: pointer;
+    fill: red;
+}
+#cfff{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  height: 100%;
+}
+.issuepopupform>header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+}
+.issuepopupform {
+    display: grid;
+    height: 80vh;
+    grid-template-rows: 0.2fr 3fr 0.2fr;
+    grid-auto-flow: row;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 600px;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cform-group {
+    margin-bottom: 15px;
+}
+
+.cform-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.cform-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.cform-control:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+textarea.cform-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.cpriority-high {
+    background-color: #ffebee;
+}
+
+.cpriority-medium {
+    background-color: #fff3e0;
+}
+
+.cpriority-low {
+    background-color: #e8f5e9;
+}
+
+.cbtn-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cbtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cbtn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.cbtn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.cattachment-area {
+    border: 2px dashed #ddd;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+#cissueForm{
+    overflow: scroll;
+}

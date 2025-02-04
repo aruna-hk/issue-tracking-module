@@ -4,8 +4,7 @@ from .views import HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('base.urls')),
-    path('', include("django.contrib.auth.urls")),
     path('', HomeView.as_view(), name='home'),
-#    path('ticket/login/', Ticket.as_view(), name='login_issue'),
+    path('', include('base.urls')),
+    path('', include('django.contrib.auth.urls')),
 ]

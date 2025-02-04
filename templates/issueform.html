@@ -1,70 +1,88 @@
-<div id="ff" style="display: none;">
-  <div id="fff">
-    <header>
+<div id="cfff">
+    <div class="issuepopupform">
+        <header>
       <div>Create Issue</div>
       <div>
         <svg fill="#000000" height="15" width="15" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.775 460.775" xml:space="preserve">
           <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55  c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55  c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505  c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55  l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719  c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"></path>
      </svg>
       </div>
-    </header>
-    <div class="sect1">
-      <div id="rf">
-        <div class="sm">
-          <label for="prjj">Project</label>
-          <select id="prjj" name="PRJ">
-            <option value="IS1">Issue Tracking</option>
-            <option value="IS2">Company XYZ ERP system</option>
-          </select>
+    </header><div id="cissueForm">
+            
+            
+            <div class="cform-group">
+                <label for="ctitle">Title*</label>
+                <input type="text" required="" class="cform-control" id="ctitle">
+            </div>
+
+            <div class="cform-group">
+                <label for="ctype">Issue Type*</label>
+                <select required="" id="ctype" class="cform-control">
+                    <option value="">Select Type</option>
+                    <option value="bug">Bug</option>
+                    <option value="feature">Feature Request</option>
+                    <option value="task">Task</option>
+                    <option value="enhancement">Enhancement</option>
+                    <option value="security">Security Issue</option>
+                </select>
+            </div><div class="cform-group">
+                <label for="cdescription">Description*</label>
+                <textarea required="" id="cdescription" class="cform-control"></textarea>
+            </div>
+
+            
+
+            <div class="cform-group">
+                <label for="cpriority">Priority*</label>
+                <select required="" id="cpriority" class="cform-control">
+                    <option value="">Select Priority</option>
+                    <option value="critical">Critical</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <div class="cform-group">
+                <label for="cassignee">Assignee</label>
+                <select id="cassignee" class="cform-control">
+                    <option value="">Select Assignee</option>
+                    <option value="team1">Team Member 1</option>
+                    <option value="team2">Team Member 2</option>
+                </select>
+            </div>
+
+            <div class="cform-group">
+                <label for="cproject">Project*</label>
+                <select required="" id="cproject" class="cform-control">
+                    <option value="">Select Project</option>
+                    <option value="project1">Project 1</option>
+                    <option value="project2">Project 2</option>
+                </select>
+            </div>
+
+            <div class="cform-group">
+                <label for="ctags">Tags</label>
+                <input type="text" placeholder="Enter tags separated by commas" id="ctags" class="cform-control">
+            </div>
+
+            <div class="cform-group">
+                <label>Attachments</label>
+                <div class="cattachment-area">
+                    <input type="file" id="attachments" multiple="">
+                    <p>Drag &amp; drop files here or click to select</p>
+                </div>
+            </div>
+
+            <div class="cform-group">
+                <label for="cdueDate">Due Date</label>
+                <input type="date" id="cdueDate" class="cform-control">
+            </div>
+
+            
         </div>
-        <div class="sm">
-          <label for="IT">Issue Type</label>
-          <select id="IT" name="issuetype">
-            <option value="T">Task</option>
-            <option value="B">Bug</option>
-            <option value="FR">Feature request</option>
-          </select>
-        </div>
-      </div>
-      <div class="sm">
-        <label for="status">Status</label>
-        <select id="status" name="status">
-          <option value="TODO">TO DO</option>
-          <option value="INP">IN PROGRESS</option>
-        </select>
-      </div>
-      <div class="sm">
-        <label for="AT">Assigne To</label>
-        <select id="AT" name="user">
-          <option value="USR1">USR 1</option>
-          <option value="USR2">USR 2</option>
-        </select>
-      </div>
-      <div class="sm">
-        <label for="smm">Summary</label>
-        <input type="text">
-      </div>
-      <div class="sm">
-        <label for="descrr">Description</label>
-        <textarea type="textarea"></textarea>
-      </div>
-      <div class="sm">
-        <label for="pi">Parent Issue</label>
-        <select id="pi" name="parent">
-          <option value="IS-09">User Interface Design</option>
-          <option value="IS-08">Database Design</option>
-        </select>
-      </div>
-      <div class="sm">
-        <label for="fi">Attachments</label>
-        <input id="fi" type="file">
-      </div>
-  </div>
-  <div id="ffoot">
-    <div id="fc">
-      <div>Cancel</div>
-      <button>Create</button>
-    </div>
-  </div>
-  </div>
-</div>  
+    <div class="cbtn-group">
+                <button type="button" class="cbtn cbtn-secondary">Cancel</button>
+                <button type="submit" class="cbtn cbtn-primary">Create Issue</button>
+            </div></div>
+</div>

@@ -1,0 +1,97 @@
+.issue-widget {
+    width: 250px;
+    background-color: #FFFFFF;
+    border: 1px solid #DFE1E6;
+    border-radius: 3px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    padding: 12px;
+}
+.issue-widget .icon{
+  background: gainsboro;
+}
+.boardlist{
+  display:none;
+  position: absolute;
+  background: white;
+  z-index: 6;
+  box-shadow: 3px 3px 3px 3px rgba(0,0, 0, 0.4);
+  border-radius: 3px;
+  width: 150px;
+}
+.boardlist>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.boardlist >div>div{
+  margin: 2px;
+}
+.boardlist>div>div:hover{
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
+}   
+.issue-widget .header:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.issue-widget svg{
+  fill: black;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #6B778C;
+    margin-top: -2px;
+}
+
+.quick-links {
+    font-size: 12px;
+    color: #6B778C;
+    margin: 8px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #DFE1E6;
+}
+
+.issue-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    color: #172B4D;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.issue-count {
+    background-color: #DFE1E6;
+    border-radius: 3px;
+    padding: 0 4px;
+    font-size: 12px;
+}
+
+.board-section {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #0052CC;
+    font-size: 14px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.board-section>div span{
+    display: block;
+}
+.board-section>div{
+    display: flex;
+    gap:10px
+}
+.board-count {
+    color: #172B4D;
+}
+
+.chevron-icon {
+    width: 12px;
+    height: 12px;
+    fill: #172B4D;
+}
