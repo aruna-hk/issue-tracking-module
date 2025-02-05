@@ -8,6 +8,13 @@ function project_form(){
 }
 
 jQuery(document).ready(function(){
+  jQuery(".xcontent>#Capa_1").bind('click', (event)=>{
+    jQuery('.ncontent').css('display', 'none')
+  })
+  jQuery('#notifbell>svg').bind('click', function(event){
+    event.stopPropagation()
+    jQuery('.ncontent').css('display', 'block')
+  })
   jQuery('.p09, .boardlist, #usrr').on('mouseleave', function(){
     jQuery(this).css('display', 'none')
   })

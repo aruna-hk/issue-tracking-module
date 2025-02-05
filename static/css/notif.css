@@ -1,0 +1,145 @@
+.xcontent{
+    position: absolute;
+    top: 3px;
+    right: 4px;
+}
+.xcontent #Capa_1{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin: 3px;
+}
+.xcontent svg{
+    width: 24px;
+    height: 24px;
+}
+#notifbell{
+  z-index: 10002;
+}
+.nnotiff{
+  position:fixed;
+  bottom: 1em;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: end;
+}
+.nnotiff svg{
+  height: 50px;
+  width: 50px;
+  z-index: 1001;
+  background: transparent;
+}
+.nnotiff svg path:hover, .nnotiff svg circle:hover, .nnotiff svg text:hover{
+  cursor: pointer;
+}
+.ncontent{
+    display: none;
+  position: fixed;
+  right: 0;
+  bottom: 5px;
+  overflow: scroll;
+  margin:0.5em; 
+  max-width: 450px;
+  max-height: 400px;
+  background: white;
+  border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 10001;
+}
+.nnotification-header {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nnotification-tabs {
+    display: flex;
+    gap: 10px;
+    padding: 5px 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ntab {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.ntab.nactive {
+    background: #e9ecef;
+    font-weight: bold;
+}
+
+.nnotification-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.nnotification-item:hover {
+    background: #f8f9fa;
+}
+
+.nnotification-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nnotification-content {
+    flex: 1;
+}
+
+.notification-title {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.nnotification-meta {
+    color: #666;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nnotification-time {
+    color: #999;
+}
+
+.unread {
+    background: #f0f7ff;
+}
+
+.unread::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #007bff;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    margin-top: 5px;
+}
+
+.priority-high { color: #dc3545; }
+.priority-medium { color: #ffc107; }
+.priority-low { color: #28a745; }
+
+.mark-all-read {
+    color: #007bff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
