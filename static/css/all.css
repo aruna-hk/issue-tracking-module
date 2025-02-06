@@ -118,12 +118,12 @@
   position: fixed;
   background: blue;
   right: 0;
-  top: 69px;
+  top: 45px;
 }
 .p09 {
   display: none;
   position: absolute;
-  top: 69px;
+  top: 45px;
   border-radius: 0.5em; 
 }
 
@@ -312,12 +312,11 @@ button {
   background: saddlebrown;
 }
 .issueh {
-  margin-top: 3px;
-  margin-left: 1em;
   align-content: center;
   cursor: pointer;
   border-radius: 20%;
-  padding:.8rem;
+  padding: 8px;
+  margin: 0.2em;
   border-radius:5px;
   font-size:1rem;
   text-align:left;
@@ -327,11 +326,12 @@ button {
   border-radius: 40%
 }
 #issue {
-  margin-top: 1.5em;
+  margin: 1.5em;
   border-bottom: 2px solid slateblue;
   display: flex;
   text-align: center;
-  min-height: 45px;
+  flex-flow: wrap;
+  gap: 8px
 }
 .issues ul {
   list-style: none;

@@ -8,13 +8,90 @@ function project_form(){
 }
 
 jQuery(document).ready(function(){
+  globalThis.WS = new WebSocket("ws://localhost:8001")
+  globalThis.ndata = []
+  WS.addEventListener("message", (message)=>{
+    jQuery('#notifbell>svg>text')[0].innerHTML = Number(jQuery('#notifbell>svg>text')[0].innerHTML) + 1
+    globalThis.ndata = JSON.parse(JSON.parse(message.data))
+    for (issue of ndata){
+      console.log(issue)
+      let item = document.createElement('div')
+      item.className = 'nnotification-item unread'
+        
+      let badge = document.createElement('div')
+      item.appendChild(badge)
+      badge.className = 'nnotification-icon priority-low'
+      badge.textContent = "✓"
+      if (issue.priority == 'high'){
+        badge.textContent  = "⚡"
+        badge.className = "nnotification-icon priority-high"
+      } else if (issue.priority == 'medium'){
+        badge.textContent = "💬"
+        badge.className = "nnotification-icon priority-medium"
+      }
+
+      let itemContent = document.createElement('div')
+      itemContent.className = "nnotification-content"
+      item.appendChild(itemContent)
+
+      let title = document.createElement('div')
+      title.className = "nnotification-title"
+      title.textContent = "You've been assigned Issue #" + issue.id
+      itemContent.appendChild(title)
+      let text = document.createElement("div")
+      text.className = "nnotification-text"
+      text.textContent = issue.name
+      itemContent.append(text)
+
+      let meta = document.createElement('div')
+      meta.className = 'nnotification-meta'
+      itemContent.appendChild(meta)
+      let metaProject = document.createElement('div')
+      metaProject.className = 'nnotification-project'
+      metaProject.textContent = issue.project
+      meta.append(metaProject)
+      let metaTime = document.createElement('div')
+      metaTime.className = 'nnotification-time'
+      metaTime.textContent = issue.time
+      meta.append(metaTime)
+
+      document.querySelector('.nnotification-list').insertBefore(item, document.querySelector('.nnotification-list').firstElementChild)
+      let sound = new Audio("static/audio/ctm.mp4")
+      sound.play()
+    }
+
+  })
+  jQuery('.ntab').bind('click', (event)=>{
+    jQuery('.nnotification-tabs>div').attr('class', 'ntab')
+    jQuery(event.currentTarget).attr('class', 'ntab nactive')
+  })
+  jQuery('.mark-all-read').bind('click', (event)=>{
+    jQuery('.nnotification-item').attr('class', 'nnotification-item')
+  })
+  jQuery('.nnotification-item').bind('click', (event)=>{
+    jQuery(event.currentTarget).attr('class', 'nnotification-item')
+  })
+  jQuery('.nnotification-item').bind('click', (event)=>{
+    jQuery(this).attr('class', 'nnotification-item')
+  })
   jQuery(".xcontent>#Capa_1").bind('click', (event)=>{
     jQuery('.ncontent').css('display', 'none')
+    jQuery('#issuesumary').css('width', '100%')
   })
+
+
   jQuery('#notifbell>svg').bind('click', function(event){
     event.stopPropagation()
+    window.resizeBy(0,0)
+    //globalThis.WS.addEventListener('message', (message)=>{
+      //console.log(message)
+      //data = JSON.parse(JSON.parse(message.data))
     jQuery('.ncontent').css('display', 'block')
+    jQuery('#issuesumary').css('width', `${jQuery('#main1')[0].clientWidth-jQuery('.ncontent')[0].clientWidth}`)
   })
+
+
+
   jQuery('.p09, .boardlist, #usrr').on('mouseleave', function(){
     jQuery(this).css('display', 'none')
   })
@@ -163,5 +240,10 @@ jQuery(document).ready(function(){
       jQuery('#sumc, #tlm, #ccc').css('display', 'none')
       jQuery('#lll').css('display', 'block')
     }
+  })
+  jQuery('#notifbell>svg').click()
+  jQuery('#issuesumary').css('width', `${jQuery('#main1')[0].clientWidth-jQuery('.ncontent')[0].clientWidth}`)
+  window.addEventListener('resize', (event)=>{
+    jQuery('#issuesumary').css('width', `${jQuery('#main1')[0].clientWidth-jQuery('.ncontent')[0].clientWidth}`)
   })
 })
