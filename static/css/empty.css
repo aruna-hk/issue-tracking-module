@@ -1,0 +1,12 @@
+.projectsPH {
+  width: 100%;
+  justify-self: center;
+  border: solid;
+}
+.phc{
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  margin: 8px;
+  font-size: 30px
+}
